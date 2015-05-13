@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
-		id        = "py.com.diagro.www"
-		versionCode="1.0.2"
-		version   = "1.0.2">
-		<name>Diagro S.A.</name>
+		id        = "fijate.covepa.org"
+		versionCode="1.0.1"
+		version   = "1.0.1">
+		<name>COVEPA</name>
 		<description>
 Covepa		</description>
 		<author href="http://www.fijatebien.net" email="allowski@gmail.com">Alberto Miranda</author>

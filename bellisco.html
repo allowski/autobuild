@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+		<title>Bellisco</title>
+		<link rel="stylesheet" type="text/css" href="css/4pp.css">
+		<link rel="stylesheet" type="text/css" href="css/custom.css">
+	</head>
+	<body>
+		<div id="viewport">
+			<div class="navbar navbar-inverse navbar-fixed-top" onclick="history.back();" >
+				<a id="backButton" class="navbar-brand">
+					<span class="pull-left"><span class="glyphicon glyphicon-chevron-left"></span></span>
+					<span id="appTitle">Bellisco</span>
+				</a>
+			</div>
+			<div class="content">
+		<form id="viewport">
+			<table class="table table-striped table-bordered table-condensed">
+				<tr>
+					<th colspan="3" class="text-center theader">Datos Generales</th>
+				</tr>
+				<tr>
+					<td>Peso Vivo Inicial</td>
+					<td style="width:100px;"><input type="text" class="form-control text-right" id="C3" value="220"></td>
+					<td style="width:120px;">kg</td>
+				</tr>
+				<tr>
+					<td>Peso Vivo Final</td>
+					<td><input type="text" class="form-control text-right" id="C4" value="360"></td>
+					<td>kg</td>
+				</tr>
+				<tr>
+					<td>Precio del novillo al Gancho (Frigorifico)</td>
+					<td><input type="text" class="form-control text-right" id="C6" value="3,17"></td>
+					<td>USD/kg vivo</td>
+				</tr>
+				<tr>
+					<td>Consumo  (0,5 gr a 1,0gr x Kg del PV)</td>
+					<td><input type="text" class="form-control text-right" id="C7" value="0,05"></td>
+					<td>(%)</td>
+				</tr>
+				<tr>
+					<td>Costo Bellisco</td>
+					<td><input type="text" class="form-control text-right" id="C8" value="19,76"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Costo Competencia (SM)</td>
+					<td><input type="text" class="form-control text-right" id="C9" value="17,00"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Ganancia adicional Bellisco (Kg/año)</td>
+					<td><input type="text" class="form-control text-right" id="C10" value="30"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th colspan="3" class="text-center theader">Suplemento mineral X Bellisco SV</th>
+				</tr>
+				<tr>
+					<td>Peso Promedio del animal en el periodo (365 dias)</td>
+					<td><input type="text" class="form-control text-right" id="C13" value=""></td>
+					<td>kg</td>
+				</tr>
+				<tr>
+					<th colspan="3" class="text-center theader">Costos Anuales con Bellisco</th>
+				</tr>
+				<tr>
+					<td>Consumo de la Dieta</td>
+					<td><input type="text" class="form-control text-right" id="C17" value=""></td>
+					<td>kg/animal/dia</td>
+				</tr>
+				<tr>
+					<td>Precio Bellisco</td>
+					<td><input type="text" class="form-control text-right" id="C18" value=""></td>
+					<td>US/Kg Bellisco</td>
+				</tr>
+				<tr>
+					<td>Costo diario de la suplementacion de Bellisco</td>
+					<td><input type="text" class="form-control text-right" id="C19" value=""></td>
+					<td>US/animal/dia</td>
+				</tr>
+				<tr>
+					<td>Costo de la suplementacion Bellisco/año (365 dias)</td>
+					<td><input type="text" class="form-control text-right" id="C20" value=""></th>
+					<td>US/animal/año</td>
+				</tr>
+				<tr>
+					<th colspan="3" class="text-center theader">Costos anuales con Suplemento Mineral</th>
+				</tr>
+				<tr>
+					<td>Consumo mineral</td>
+					<td><input type="text" class="form-control text-right" id="C21" value="0,07"></td>
+					<td>kg/animal/dia</td>
+				</tr>
+				<tr>
+					<td>Precio suplemento mineral</td>
+					<td><input type="text" class="form-control text-right" id="C22" value=""></td>
+					<td>US/Kg Bellisco</td>
+				</tr>
+				<tr>
+					<td>Costo de la suplementacion mineral/a&ntilde;o (365 dias)</td>
+					<td><input type="text" class="form-control text-right" id="C23" value=""></td>
+					<td>US/animal/a&ntilde;o</td>
+				</tr>
+				<tr>
+					<td>Diferencia de Costo por animal/año (Bellisco - SM)</td>
+					<td><input type="text" class="form-control text-right" id="C24" value=""></td>
+					<td>US/animal/a&ntilde;o</td>
+				</tr>
+				<tr>
+					<td>Ganancia diaria adicional para cobrir la diferencia</td>
+					<td><input type="text" class="form-control text-right" id="C25" value=""></td>
+					<td>Gramos/animal/dia</td>
+				</tr>
+				<tr>
+					<td>Ganancia adicional para cobrir la diferencia</td>
+					<td><input type="text" class="form-control text-right" id="C26" value=""></td>
+					<td>kg/animal/a&ntilde;o</td>
+				</tr>
+				<tr><td colspan="3">** Ganancia Esperada de 80 gramos  de PV x dia =  30 Kg x año</td></tr>
+				<tr>
+					<td>Ganancia esperada por año en USD x animal tratado</td>
+					<td><input type="text" class="form-control text-right" id="C27" value=""></td>
+					<td>USD/animal/a&ntilde;o</td>
+				</tr>
+			</table>
+		</form>
+		</div>
+		</div>
+		<!-- scripts -->
+		<script src="js/jquery.min.js"></script>
+<script>
+function get(id){
+	return parseFloat($("#"+id).val().replace(",", "."));
+}
+
+function number_format(number, decimals, dec_point, thousands_sep) {
+
+  number = (number + '')
+    .replace(/[^0-9+\-Ee.]/g, '');
+  var n = !isFinite(+number) ? 0 : +number,
+    prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
+    sep = (typeof thousands_sep === 'undefined') ? ',' : thousands_sep,
+    dec = (typeof dec_point === 'undefined') ? '.' : dec_point,
+    s = '',
+    toFixedFix = function(n, prec) {
+      var k = Math.pow(10, prec);
+      return '' + (Math.round(n * k) / k)
+        .toFixed(prec);
+    };
+  // Fix for IE parseFloat(0.55).toFixed(0) = 0;
+  s = (prec ? toFixedFix(n, prec) : '' + Math.round(n))
+    .split('.');
+  if (s[0].length > 3) {
+    s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
+  }
+  if ((s[1] || '')
+    .length < prec) {
+    s[1] = s[1] || '';
+    s[1] += new Array(prec - s[1].length + 1)
+      .join('0');
+  }
+  return s.join(dec);
+}
+
+function recalc(){
+	$("#C13").val((get("C3")+get("C4"))/2);
+	$("#C17").val((get("C13")*get("C7"))/100);
+	$("#C18").val((get("C8")/30).toFixed(4));
+	$("#C19").val((get("C18")*get("C17")).toFixed(4));
+	$("#C20").val((get("C19")*365).toFixed(2));
+
+	$("#C22").val(number_format((get("C9")/30).toFixed(3), 3, ",", "."));
+	$("#C23").val(number_format((get("C22")*get("C21")*365).toFixed(3), 2, ",", "."));
+
+	$("#C24").val(number_format((get("C20")-get("C23")).toFixed(3), 2, ",", "."));
+
+
+}
+recalc();
+$(function(){
+	$('input:text[value=""]').prop("disabled", true);
+	$("input").on("keyup", function(){
+		recalc();
+	});
+});
+</script>
+<style>
+.table .theader{
+	text-align: center;
+}
+.form-control{
+	border-radius: 0px !important;
+	padding:2px;
+	height:26px;
+	border:none !important;
+	background: none;
+}
+.form-control:disabled{
+	font-weight: bold;
+	background:none;
+}
+.table.table-bordered,
+.table.table-bordered tr,
+.table.table-bordered tr th,
+.table.table-bordered tr td{
+	border-color:black !important;
+	padding:0px !important;
+	line-height: 26px;
+}
+table.table.table-bordered tr th{
+	background: #000;
+	color:#ff0;
+	font-size: 18px;
+	padding:10px !important;
+	line-height: 30px;
+}
+</style>
+	</body>
+</html>
