@@ -253,7 +253,7 @@ if(typeof app.runJS!="undefined"){
 	eval(app.runJS);
 }
 
-
+/*
 (function(){
 	window.appRootDirName = ".myapp";
 	document.addEventListener("deviceready", onDeviceReady, false);
@@ -280,5 +280,5 @@ if(typeof app.runJS!="undefined"){
 		window.appRootDir = entry;
 		alert(JSON.stringify(window.appRootDir));
 	}
-})();
+})();*/
 
