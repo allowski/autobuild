@@ -1,0 +1,1 @@
+window.a4pp(app);
