@@ -128,6 +128,8 @@ function user_delete_entry(indexOf){
 		
 		delete_entry(indexOf);
 		
+		$(".te:eq("+indexOf+")").addClass("removed");
+		
 	}
 	
 }
