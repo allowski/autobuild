@@ -128,7 +128,7 @@ function user_delete_entry(indexOf){
 		
 		delete_entry(indexOf);
 		
-		triggerGoTo("/0/");
+		triggerGoTo("0");
 		
 		a4pp_destroy_only();
 		
