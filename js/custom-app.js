@@ -194,7 +194,7 @@ function edit_entry_in_form(indexOf){
 				
 				final = final + $("[name="+x+"]").length;
 				
-				$("#theImg").attr("src", cur.pic);
+				$("#theImg").attr("src", cur.pic || 'img/fallback.png');
 			}
 		
 		}else{
