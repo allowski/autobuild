@@ -42,9 +42,9 @@ function save_entry(){
 		
 	}
 	
+	a4pp_destroy_last();
+	
 	triggerGoTo("0");
-
-	a4pp_destroy_only();
 	
 }
 

@@ -927,6 +927,18 @@ function a4pp_destroy_only(){
 
 }
 
+function a4pp_destroy_prev_last(){
+	
+	$(".content:last").prev().remove();
+	
+}
+
+function a4pp_destroy_last(){
+	
+	$(".content:last").remove();
+	
+}
+
 
 function a4pp_scan(){
 
