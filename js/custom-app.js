@@ -122,6 +122,16 @@ function delete_entry(indexOf){
 	
 }
 
+function user_delete_entry(indexOf){
+	
+	if(confirm("Eliminar este testimonio?")){
+		
+		delete_entry(indexOf);
+		
+	}
+	
+}
+
 function update_entry(indexOf, entry){
 	
 	console.log("update_entry called");
