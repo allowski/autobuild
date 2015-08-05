@@ -126,6 +126,8 @@ function user_delete_entry(indexOf){
 	
 	if(confirm("Eliminar este testimonio?")){
 		
+		toast("Testimonio eliminado!", "danger", 3000);
+		
 		delete_entry(indexOf);
 		
 		triggerGoTo("0");
