@@ -53,7 +53,7 @@ function hasClass(element, cls) {
 }
 
 function a4pp_logout(){
-	if(confirm("Desea cerrar su sesi&oacute;n?")){
+	if(confirm("Desea cerrar su sesion?")){
 		delete window.localStorage['data'];
 		$(".content:not(:first)").remove();
 		init = 0;
@@ -335,6 +335,24 @@ function a4pp_update(){
 	postRequest.error(a4pp_conn_error);
 
 	return false;
+
+}
+
+function include(template, options){
+
+	console.log(window.app.templates[template]);
+
+	return a4pp_template(window.app.templates[template], options);
+	
+}
+
+function foreach(array, f){
+
+	for (x in array){
+
+		f(array[x]);
+
+	}
 
 }
 
@@ -772,6 +790,9 @@ window.a4pp = function(data, auto){
 		
 		case "template":
 			if(data.template != undefined){
+				if(data.beforeRender){
+					var fx = new Function(data.beforeRender)();
+				}
 				body.innerHTML = body.innerHTML + a4pp_template(window.app.templates[data.template], data);
 			}
 		break;
@@ -779,6 +800,12 @@ window.a4pp = function(data, auto){
 	}
 
 	documentBody.appendChild(body);
+
+	if(data.afterRender){
+		setTimeout(function(){
+			var fx = new Function(data.afterRender)();
+		},200);
+	}
 
 	/**
 	 *	App Menu
@@ -830,20 +857,6 @@ function addItem(data, title, type){
 }
 
 
-
-var jquery = document.createElement("script");
-
-jquery.id = "jquery";
-
-jquery.src="js/jquery.min.js";
-
-document.getElementsByTagName("head")[0].appendChild(jquery);
-
-if(typeof window.app!="undefined"){
-	var nl = new Function(window.app.runJS)();
-}
-
-
 function goIndex(e, path){
 	var itemx = getFromPath(path);
 	console.log("X: "+e.clientX);
@@ -861,6 +874,72 @@ function goIndex(e, path){
 	}
 }
 
+function a4pp_carousel(id){
+	
+	$('#car').carousel('next'); 
+	
+	$('#car').carousel('pause');
+	
+	$('#car').hammer().on('swipeleft', function(){
+		$('#car').carousel('next'); 
+	});
+	$('#car').hammer().on('swiperight', function(){
+		$('#car').carousel('prev'); 
+	});
+	$('#car').bind('slide.bs.carousel', function (e) {
+		console.log($('.active', e.target).index());
+		if($('.active', e.target).index()+1===$(id).find(".item").length){
+			history.back();
+		}
+	});
+	
+}
+
+function getGallery(){
+	if(window.localStorage["gallery2"] == undefined){
+		window.localStorage["gallery2"] = "[]";
+	}
+	return JSON.parse(window.localStorage["gallery"]);
+}
+
+function setGallery(arr){
+	window.localStorage["gallery2"] = JSON.stringify(arr);
+}
+
+function openCamera(w, h, q, callback){
+	
+	navigator.camera.getPicture(function(imgData){
+		callback( "data:image/jpeg;base64,"+imgData);
+	}, function(){
+		alert("Error");
+	},{ 
+		quality: q,
+		destinationType: Camera.DestinationType.DATA_URL,
+		targetWidth: w,
+		targetHeight: h
+	});
+	
+}
+
+function a4pp_destroy_only(){
+
+	$(".content:not(:last):not(:first):not(:eq(1))").remove();
+
+}
 
 
+function a4pp_scan(){
 
+	cordova.plugins.barcodeScanner.scan(
+      function (result) {
+          alert("We got a barcode\n" +
+                "Result: " + result.text + "\n" +
+                "Format: " + result.format + "\n" +
+                "Cancelled: " + result.cancelled);
+      }, 
+      function (error) {
+          alert("Scanning failed: " + error);
+      }
+   );
+
+}
