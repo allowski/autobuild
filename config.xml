@@ -2,7 +2,7 @@
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		id        = "com.testimonios.diagro.py"
-		version   = "6.6.2">
+		version   = "6.6.3">
 		<name>Testimonios</name>
 		<description>Testimonios 1.0.0</description>
 		<author href="http://www.fijatebien.net" email="allowski@gmail.com">Alberto Miranda</author>
