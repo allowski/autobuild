@@ -923,7 +923,7 @@ function openCamera(w, h, q, callback){
 
 function a4pp_destroy_only(){
 
-	$(".content:not(:last):not(:first):not(:eq(1))").remove();
+	$(".content:not(:last):not(:first):not(:eq(1)):not(:eq(2))").remove();
 
 }
 
