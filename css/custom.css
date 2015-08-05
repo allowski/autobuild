@@ -1,4 +1,4 @@
-/* - Version 7.2.9 - */
+/* - Version 7.3.1 - */
 
 
 .material-bar,.navbar.navbar-inverse{
@@ -9,8 +9,8 @@
 	background: -webkit-linear-gradient(top, #2f24b3 0%,#141d65 100%);
 	background: -o-linear-gradient(top, #2f24b3 0%,#141d65 100%);
 	background: linear-gradient(to bottom, #2f24b3 0%,#141d65 100%);
-	color:#ffff00;
+	color:#ffffff;
 }
 .material-bar .navbar-item{
-	color:#ffff00;
+	color:#ffffff;
 }
