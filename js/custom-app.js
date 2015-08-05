@@ -130,6 +130,10 @@ function user_delete_entry(indexOf){
 		
 		$(".te:eq("+indexOf+")").addClass("removed");
 		
+		setTimeout(function(){
+			$(".te:eq("+indexOf+")").remove();
+		},500);
+		
 	}
 	
 }
