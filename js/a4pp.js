@@ -943,3 +943,13 @@ function a4pp_scan(){
    );
 
 }
+
+function a4pp_qps(callback){
+	
+	var watchID = navigator.geolocation.watchPosition(function(p){
+		callback(p);
+	}, function(){
+		alert("Error");
+	}, { timeout: 30000 });
+	
+}
