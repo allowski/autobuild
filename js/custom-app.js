@@ -206,47 +206,64 @@ var number_format = function number_format(number, decimals, dec_point, thousand
   return s.join(dec);
 }
 
+String.prototype.insert = function (index, string) {
+  if (index > 0)
+    return this.substring(0, index) + string + this.substring(index, this.length);
+  else
+    return string + this;
+};
+
 function addRow(){
 	
 	var xy = (parseFloat( $('#aplicaciones').val()) * parseFloat($('#precio').val()) * parseFloat($('#dosis').val()) ); 
 	
 	var soja = parseFloat($("#soja").val());
 	
+	var numero = $("#emp").val();
+	
 	var xyz  = xy/soja*1000/60;
 	
 	var kg = xyz / soja * 1000;
 	
-	$('#result').append(
-		'<tr onclick="$(this).remove();autoSum();"><td>'+		$('#producto').val()+
+	var clase = (numero == 1) ? 'success' : 'danger';
+	
+	$('#result'+numero).append(
+		'<tr class="'+clase+'" onclick="$(this).remove();autoSum();"><td>'+		$('#producto').val()+
 		'</td><td>'+	$('#um').val()+	
 		'</td><td>'+	$('#dosis').val()+	
 		'</td><td class="text-right">$ '+ 	number_format($('#precio').val(),2,",",".")+	
 		'</td><td class="text-center">'+	$('#aplicaciones').val()+	
 		'</td><td class="suma text-right" data-val="'+xy+'">$ '+number_format(xy,2,",", ".")+	
 		'</td><td class="suma2 text-right" data-val="'+xyz+'">$ '+number_format(xyz,2,",", ".")+
-		'</td><td class="suma3 text-right" data-val="'+xyz+'">$ '+number_format(kg,2,",", ".")+
+		'</td><td class="suma3 text-right" data-val="'+kg+'">$ '+number_format(kg,2,",", ".")+
 		'</td></tr>');
 	clearAll();
 	autoSum();
 }
 
-function autoSum(){
+function auto(num){
 	var sum3 = 0;
 	var sum2 = 0;
 	var sum = 0; 
-	$('.suma').each(function(){ 
+	$("#result"+num).find('.suma').each(function(){ 
 		sum+=$(this).attr("data-val"); 
-		$('#total').text("$ "+number_format(sum, 2, ",", ".")); 
+		$("#t"+num).find('#total').text("$ "+number_format(sum, 2, ",", ".")); 
 	});
-	$('.suma2').each(function(){ 
+	$("#result"+num).find('.suma2').each(function(){ 
 		sum2+=$(this).attr("data-val"); 
-		$('#total2').text("$ "+number_format(sum2, 2, ",", ".")); 
+		$("#t"+num).find('#total2').text("$ "+number_format(sum2, 2, ",", ".")); 
 	});
-	$('.suma3').each(function(){ 
+	$("#result"+num).find('.suma3').each(function(){ 
 		sum3+=$(this).attr("data-val"); 
-		$('#total2').text("$ "+number_format(sum3, 2, ",", ".")); 
+		$("#t"+num).find('#total3').text("$ "+number_format(sum3, 2, ",", ".")); 
 	});
 	
+}
+
+function autoSum(){
+	$('#total,#total2,#total3').html("0");
+	auto(1);
+	auto(2);
 }
 
 function clearAll(){
@@ -270,8 +287,11 @@ function salvar(){
 	
 	if(window.currentFile === 999){
 		if($("#nome").val()==""){ 
-			while(nome==""){
+			if(nome==""){
 				nome = prompt("Guardar como:");
+				if (variable === undefined || variable === null) {
+					return;
+				}
 			}
 		}else{
 			nome = $("#nome").val();
@@ -321,7 +341,7 @@ function selectChange(t){
 		
 		window.currentFile = 999;
 		
-		$("#result").html("");
+		$("#result1, #result2").html("");
 		
 		$("#nome").val("");
 		
@@ -355,8 +375,56 @@ function deletar(){
 		window.currentFile = 999;
 		$("#tblHtml,#nome").val("");
 		selectFile();
+		autoSum();
+		$("#result1,#result2").html("");
 	}else{
 		clearAll();
+		autoSum();
+		$("#result1,#result2").html("");
 		$("#tblHtml,#nome").val("");
 	}
+}
+
+function toDbl(evt, ele){
+	
+	console.log("Keyup");
+	
+	var valant = $(ele).val();
+	
+	valant = valant.replace(".", "");
+		
+	console.log("Value:"+valant.length);
+	
+	if((valant.length > 1)&&(valant.indexOf(".")===-1)){
+		valant = valant.insert(valant.length-2, ".");
+		console.log("insert into:"+(valant.length-2));
+	}
+	
+	$(ele).val(valant);
+}
+
+function send_email(){
+	
+	var email = prompt("Digite el email:");
+	
+	if(email != ""){
+	
+		var title = "Presupuesto "+$("#nome").val();
+	
+		var content = $("#tblHtml").html();
+		
+		toast("Mandando correo..", "warning", 0);
+		
+		$.post(window.app.update_url, {"apx":"send_email","email":email, "title": title, "content":content}, function(){
+			
+			toast("Correo enviado", "success", 3000);
+			
+		});
+	
+	}else{
+		
+		alert("cancelado");
+		
+	}
+	
 }
