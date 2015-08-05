@@ -128,11 +128,9 @@ function user_delete_entry(indexOf){
 		
 		delete_entry(indexOf);
 		
-		$(".te:eq("+indexOf+")").addClass("removed");
+		triggerGoTo("/0/");
 		
-		setTimeout(function(){
-			$(".te:eq("+indexOf+")").remove();
-		},500);
+		a4pp_destroy_only();
 		
 	}
 	
