@@ -966,32 +966,41 @@ function a4pp_gps(callback){
 	
 }
 
-function a4pp_download_file(){
-	downloadFile();
+function a4pp_download_file(url, fname, prog){
+	downloadFile(url, fname, prog);
 }
 
- function downloadFile(){
+ function downloadFile(url, fname, prog){
+	 
+		var pro = document.getElementById(prog);
+	 
         window.requestFileSystem(
                      LocalFileSystem.PERSISTENT, 0, 
                      function onFileSystemSuccess(fileSystem) {
                      fileSystem.root.getFile(
                                  "dummy.html", {create: true, exclusive: false}, 
                                  function gotFileEntry(fileEntry){
-                                 var sPath = fileEntry.fullPath.replace("dummy.html","");
+                                 var sPath = fileEntry.toURI().replace("dummy.html","");
                                  var fileTransfer = new FileTransfer();
+                                 var porc = 0;
+                                 fileTransfer.onprogress = function(progressEvent){
+									  porc = ((progressEvent.loaded / progressEvent.total) *100);
+									 pro.style.width = porc + "%";
+									 $('#perc').text(porc + "%");
+								 };
+                                 
                                  fileEntry.remove();
  
                                  fileTransfer.download(
-                                           "http://www.w3.org/2011/web-apps-ws/papers/Nitobi.pdf",
-                                           sPath + "theFile.pdf",
+                                           encodeURI(url),
+                                           sPath + fname,
                                            function(theFile) {
-                                           alert("download complete: " + theFile.toURI());
                                            showLink(theFile.toURI());
+                                           $('#perc').text("100%");
+                                           pro.style.width = "100%";
                                            },
                                            function(error) {
-                                          alert("download error source " + error.source);
-                                           alert("download error target " + error.target);
-                                           alert("upload error code: " + error.code);
+                                          alert("No se pudo bajar: " + error.source);
                                            }
                                            );
                                  }, 

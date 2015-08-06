@@ -1,14 +1,14 @@
-/* - Version 8.0.5 - */
+/* - Version 8.2.3 - */
 
 
 .material-bar,.navbar.navbar-inverse{
-	background:#f07200;
+	background:#ff2222;
 	background: #ff3019;
-	background: -moz-linear-gradient(top, #f07200 0%, #d95e13 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f07200), color-stop(100%,#d95e13));
-	background: -webkit-linear-gradient(top, #f07200 0%,#d95e13 100%);
-	background: -o-linear-gradient(top, #f07200 0%,#d95e13 100%);
-	background: linear-gradient(to bottom, #f07200 0%,#d95e13 100%);
+	background: -moz-linear-gradient(top, #ff2222 0%, #a41515 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff2222), color-stop(100%,#a41515));
+	background: -webkit-linear-gradient(top, #ff2222 0%,#a41515 100%);
+	background: -o-linear-gradient(top, #ff2222 0%,#a41515 100%);
+	background: linear-gradient(to bottom, #ff2222 0%,#a41515 100%);
 	color:#ffffff;
 }
 .material-bar .navbar-item{
