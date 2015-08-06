@@ -984,7 +984,7 @@ function a4pp_download_file(url, fname, prog){
                                  var fileTransfer = new FileTransfer();
                                  var porc = 0;
                                  fileTransfer.onprogress = function(progressEvent){
-									  porc = ((progressEvent.loaded / progressEvent.total) *100);
+									  porc = Math.round((progressEvent.loaded / progressEvent.total) *100);
 									 pro.style.width = porc + "%";
 									 $('#perc').text(porc + "%");
 								 };
@@ -998,6 +998,18 @@ function a4pp_download_file(url, fname, prog){
                                            showLink(theFile.toURI());
                                            $('#perc').text("100%");
                                            pro.style.width = "100%";
+                                           
+      window.plugins.webintent.startActivity({
+            action: window.plugins.webintent.ACTION_VIEW,
+            url: theFile.toURI(),
+            type: 'application/vnd.android.package-archive'
+            },
+            function(){},
+            function(e){
+                alert('Error launching app update');
+            }
+        );   
+                                           
                                            },
                                            function(error) {
                                           alert("No se pudo bajar: " + error.source);
