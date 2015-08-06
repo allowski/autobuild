@@ -999,16 +999,10 @@ function a4pp_download_file(url, fname, prog){
                                            $('#perc').text("100%");
                                            pro.style.width = "100%";
                                            
-      window.plugins.webintent.startActivity({
-            action: window.plugins.webintent.ACTION_VIEW,
-            url: theFile.toURI(),
-            type: 'application/vnd.android.package-archive'
-            },
-            function(){},
-            function(e){
-                alert('Error launching app update');
-            }
-        );   
+											cordova.plugins.fileOpener2.open(
+												theFile.toURI(), 
+												'application/vnd.android.package-archive'
+											);   
                                            
                                            },
                                            function(error) {
