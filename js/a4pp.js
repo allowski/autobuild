@@ -999,10 +999,7 @@ function a4pp_download_file(url, fname, prog){
                                            $('#perc').text("100%");
                                            pro.style.width = "100%";
                                            
-											cordova.plugins.fileOpener2.open(
-												theFile.toURL(), 
-												'application/vnd.android.package-archive'
-											);   
+											window.plugins.fileOpener.open(theFile.toURI());   
                                            
                                            },
                                            function(error) {
