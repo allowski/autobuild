@@ -967,6 +967,12 @@ function a4pp_gps(callback){
 }
 
 function a4pp_download_file(){
+	
+	alert("Download");
+	
+	var fail = function(){
+			alert('Error');
+	};
 
 
 	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, 
