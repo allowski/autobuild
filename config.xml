@@ -2,11 +2,12 @@
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		id        = "com.diagro.apps"
-		version   = "8.0.3">
+		version   = "8.0.4">
 		<name>Apps</name>
-		<description>Apps 1.0.0, Build number 8.0.3</description>
+		<description>Apps 1.0.0, Build number 8.0.4</description>
 		<author href="http://www.fijatebien.net" email="allowski@gmail.com">Alberto Miranda</author>
 		<preference name="phonegap-version" value="3.7.0" />
+		<access origin="*"/>
 		<gap:plugin name="org.apache.cordova.device" />
 		<preference name="orientation" value="default" />		<preference name="target-device" value="universal" />
 		<preference name="webviewbounce" value="false" />
