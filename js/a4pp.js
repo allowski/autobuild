@@ -985,12 +985,12 @@ function a4pp_download_file(){
 				function(theFile) {
 					alert(sPath + "theFile.pdf");
 					console.log("download complete: " + theFile.toURI());
-					showLink(theFile.toURI());
+					//showLink(theFile.toURI());
 				},
 				function(error) {
-					console.log("download error source " + error.source);
-					console.log("download error target " + error.target);
-					console.log("upload error code: " + error.code);
+					alert("download error source " + error.source);
+					alert("download error target " + error.target);
+					alert("upload error code: " + error.code);
 				}
 			);
 		}, fail);
