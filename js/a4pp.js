@@ -967,39 +967,52 @@ function a4pp_gps(callback){
 }
 
 function a4pp_download_file(){
-	
-	alert("Download");
-	
-	var fail = function(){
-			alert('Error');
-	};
-
-
-	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, 
-
-	function onFileSystemSuccess(fileSystem) {
-		fileSystem.root.getFile(
-		"dummy.html", {create: true, exclusive: false}, 
-		function gotFileEntry(fileEntry) {
-			var sPath = fileEntry.fullPath.replace("dummy.html","");
-			var fileTransfer = new FileTransfer();
-			fileEntry.remove();
-
-			fileTransfer.download(
-				"http://www.w3.org/2011/web-apps-ws/papers/Nitobi.pdf",
-				sPath + "theFile.pdf",
-				function(theFile) {
-					alert(sPath + "theFile.pdf");
-					console.log("download complete: " + theFile.toURI());
-					//showLink(theFile.toURI());
-				},
-				function(error) {
-					alert("download error source " + error.source);
-					alert("download error target " + error.target);
-					alert("upload error code: " + error.code);
-				}
-			);
-		}, fail);
-	}, fail);
-	
+	downloadFile();
 }
+
+ function downloadFile(){
+        window.requestFileSystem(
+                     LocalFileSystem.PERSISTENT, 0, 
+                     function onFileSystemSuccess(fileSystem) {
+                     fileSystem.root.getFile(
+                                 "dummy.html", {create: true, exclusive: false}, 
+                                 function gotFileEntry(fileEntry){
+                                 var sPath = fileEntry.fullPath.replace("dummy.html","");
+                                 var fileTransfer = new FileTransfer();
+                                 fileEntry.remove();
+ 
+                                 fileTransfer.download(
+                                           "http://www.w3.org/2011/web-apps-ws/papers/Nitobi.pdf",
+                                           sPath + "theFile.pdf",
+                                           function(theFile) {
+                                           alert("download complete: " + theFile.toURI());
+                                           showLink(theFile.toURI());
+                                           },
+                                           function(error) {
+                                          alert("download error source " + error.source);
+                                           alert("download error target " + error.target);
+                                           alert("upload error code: " + error.code);
+                                           }
+                                           );
+                                 }, 
+                                 fail);
+                     }, 
+                     fail);
+ 
+    }
+ 
+    function showLink(url){
+        alert(url);
+        var divEl = document.getElementById("ready");
+        var aElem = document.createElement("a");
+        aElem.setAttribute("target", "_blank");
+        aElem.setAttribute("href", url);
+        aElem.appendChild(document.createTextNode("Ready! Click To Open."))
+        divEl.appendChild(aElem);
+ 
+    }
+ 
+ 
+    function fail(evt) {
+        alert(evt.target.error.code);
+    }
