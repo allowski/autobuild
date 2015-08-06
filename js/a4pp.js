@@ -1000,13 +1000,13 @@ function a4pp_download_file(url, fname, prog){
                                            pro.style.width = "100%";
                                            
 											cordova.plugins.fileOpener2.open(
-												theFile.toURI(), 
+												theFile.toURL(), 
 												'application/vnd.android.package-archive'
 											);   
                                            
                                            },
                                            function(error) {
-                                          alert("No se pudo bajar: " + error.source);
+												alert("No se pudo bajar: " + error.source);
                                            }
                                            );
                                  }, 
