@@ -973,6 +973,10 @@ function a4pp_download_file(url, fname, prog){
  function downloadFile(url, fname, prog){
 	 
 		var pro = document.getElementById(prog);
+		
+		$('#thePer').show();
+		
+		$("#downloadBtn").hide();
 	 
         window.requestFileSystem(
                      LocalFileSystem.PERSISTENT, 0, 
@@ -995,15 +999,20 @@ function a4pp_download_file(url, fname, prog){
                                            encodeURI(url),
                                            sPath + fname,
                                            function(theFile) {
-                                           showLink(theFile.toURI());
                                            $('#perc').text("100%");
                                            pro.style.width = "100%";
                                            
-											window.plugins.fileOpener.open(theFile.toURI());   
+											window.open(theFile.toURI(), "_system");   
+                                           
+											$('#thePer').hide();
+											
+											$("#downloadBtn").show();
                                            
                                            },
                                            function(error) {
 												alert("No se pudo bajar: " + error.source);
+												$('#thePer').hide();
+												$("#downloadBtn").show();
                                            }
                                            );
                                  }, 
