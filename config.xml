@@ -2,9 +2,9 @@
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		id        = "diagro.com.py"
-		version   = "9.9.4">
+		version   = "9.9.5">
 		<name>Diagro</name>
-		<description>Diagro 2.0.6, Build number 9.9.4</description>
+		<description>Diagro 2.0.6, Build number 9.9.5</description>
 		<author href="http://www.fijatebien.net" email="allowski@gmail.com">Alberto Miranda</author>
 		<preference name="phonegap-version" value="3.7.0" />
 		<access origin="*"/>
