@@ -5,6 +5,9 @@ var searchInput;
 var lastList;
 var wHash;
 
+
+wHash = window.location.hash.replace("#", "").split("/");
+
 window.isOnline = true;
 
 
