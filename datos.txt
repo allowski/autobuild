@@ -219,9 +219,10 @@ SimpleXMLElement Object
 	</div>
 	<div class="col-sm-8">
 	    <input type='hidden' name='divulgar_imagen' value='n'>
-	    <h2>Autoriza divulgar su imagen?</h2>
+	    <h2 id="autorizado">Autoriza divulgar su imagen?</h2>
+	    <div id="si_o_no">
 	    <button class='btn btn-success btn-lg' onclick='divulgar("s");return false;'>Acepto</button>	    
-	    <button class='btn btn-danger btn-lg pull-right' onclick='divulgar("n");return false;'>No acepto</button>
+	    <button class='btn btn-danger btn-lg pull-right' onclick='divulgar("n");return false;'>No acepto</button></div>
 	</div>
 	<div class="clearfix"></div>
 	<div class='col-xs-12'>

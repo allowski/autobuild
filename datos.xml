@@ -179,9 +179,10 @@
 	&lt;/div&gt;&#xD;
 	&lt;div class="col-sm-8"&gt;&#xD;
 	    &lt;input type='hidden' name='divulgar_imagen' value='n'&gt;&#xD;
-	    &lt;h2&gt;Autoriza divulgar su imagen?&lt;/h2&gt;&#xD;
+	    &lt;h2 id="autorizado"&gt;Autoriza divulgar su imagen?&lt;/h2&gt;&#xD;
+	    &lt;div id="si_o_no"&gt;&#xD;
 	    &lt;button class='btn btn-success btn-lg' onclick='divulgar("s");return false;'&gt;Acepto&lt;/button&gt;	    &#xD;
-	    &lt;button class='btn btn-danger btn-lg pull-right' onclick='divulgar("n");return false;'&gt;No acepto&lt;/button&gt;&#xD;
+	    &lt;button class='btn btn-danger btn-lg pull-right' onclick='divulgar("n");return false;'&gt;No acepto&lt;/button&gt;&lt;/div&gt;&#xD;
 	&lt;/div&gt;&#xD;
 	&lt;div class="clearfix"&gt;&lt;/div&gt;&#xD;
 	&lt;div class='col-xs-12'&gt;&#xD;

@@ -150,7 +150,12 @@ function update_entry(indexOf, entry){
 	
 }
 
+
 function divulgar(como){
+    if(como=="s"){
+        $("#autorizado").text("Gracias por autorizar el uso de su imagen!");    
+        $("#si_o_no").hide();
+    }
     $("[name=divulgar_imagen]").val(como);
 }
 
@@ -267,10 +272,4 @@ function send_entry(entryId){
 		}
 	});
 	
-}
-
-
-
-function divulgar(como){
-    $("[name=divulgar_imagen]").val(como);
 }
