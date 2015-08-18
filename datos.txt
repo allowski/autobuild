@@ -1,0 +1,268 @@
+SimpleXMLElement Object
+(
+    [id] => 15
+    [path] => /var/www/app_15
+    [domain] => http://costobeneficio.fijatebien.net/app.php
+    [version] => SimpleXMLElement Object
+        (
+        )
+
+    [a4pp_dir] => /var/www
+    [disableLog] => SimpleXMLElement Object
+        (
+        )
+
+    [space] => app_15
+    [appHeader] => #008000
+    [appHeaderColor] => #ffffff
+    [appVersion] => 1.0.0
+    [appName] => Costo Beneficio
+    [appDomain] => com.costo.beneficio.diagro
+    [appUser] => SimpleXMLElement Object
+        (
+            [id] => 0
+            [email] => nobody@nohost.com
+            [nome] => Anonymous
+            [level] => 0
+            [app] => N
+            [admin] => N
+            [sadmin] => N
+            [hostel] => 15
+            [token] => 5058f1af8388633f609cadb75a75dc9d
+        )
+
+    [addCss] => 
+.material-bar,.navbar.navbar-inverse{
+	background:#008000;
+	background: #ff3019;
+	background: -moz-linear-gradient(top, #008000 0%, #00aa00 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#008000), color-stop(100%,#00aa00));
+	background: -webkit-linear-gradient(top, #008000 0%,#00aa00 100%);
+	background: -o-linear-gradient(top, #008000 0%,#00aa00 100%);
+	background: linear-gradient(to bottom, #008000 0%,#00aa00 100%);
+	color:#ffffff;
+}
+.material-bar .navbar-item{
+	color:#ffffff;
+}
+    [lang] => es
+    [runJS] => console.log("Callback");
+    [templates] => SimpleXMLElement Object
+        (
+            [header] => <table border="0" cellpadding="0" cellspacing="0" class='table'>
+	<tr>
+		<td>
+		<a onclick='goBack();' class="navbar-item">
+			<span class="glyphicon glyphicon-triangle-left"></span>
+		</a>
+		</td>
+		<td style='width:100%'>
+		<a onclick='goBack();' class="navbar-item">
+			<% if(this.logo!=undefined){ %>
+				<img src='<% this.logo %>' class='appLogo'>
+			<% }else{ %>
+				<% this.title %>
+			<% } %>
+		</a>
+		</td>
+		<% if(this.logged===true){ %>
+			<td>
+				<a class="navbar-item" onclick='a4pp_update();'><span id='updateIcon' class="glyphicon glyphicon-refresh"></span></a>
+			</td>
+		<% } %>
+		<% if(this.menu.length > 0){ %>
+		<td>
+			<a class="navbar-item" onclick='toggleMenu();'><span class="glyphicon glyphicon-option-vertical"></span></a>
+		</td>
+		<% } %>
+	</tr>
+</table>
+            [listview] => <div class="container">
+	<div class='superior'>
+		<% this.details %>
+	</div>
+	<ul class="model-list list <% if(this.extra!=undefined){ %> <% this.extra %> <% } %>">
+		<% for(var i=0;i<this.items.length;i++){ %>
+			<% if(this.items[i].model=='heading'){ %>
+			<h4><% this.items[i].title %></h4>
+			<% }else{ %>
+			<li class='model-list-item' onclick='triggerGoTo("<% this.items[i].xpath %>");'>
+				<% if(this.items[i].icon!=undefined){ %>
+				<img src='<% this.items[i].icon %>' style='width:48px;'>
+				<% } %> 
+				<% if(this.items[i].glyphicon!="none"){ %>
+				<div class='glyph' style='background-color:<% this.items[i].color %>'><span class='glyphicon glyphicon-<% this.items[i].glyphicon %>' style='width:48px;'></span></div>
+				<% } %> 
+				<% this.items[i].title %>
+			</li>
+			<% } %>
+		<% } %>
+	</ul> 
+</div> 
+            [table-calc] => <div class="row">
+	<style>
+	.form-control{
+		border:1px solid #ccc !important;
+		text-indent:5px;
+	}
+	</style>
+	<div class="col-sm-3">
+		<div id="form" style="padding:8px">
+			<select id="selFile" onmousedown="selectFile();" onchange="selectChange(this);"class="form-control"><option value='999'>- Nuevo archivo -</option></select>
+			<hr>
+			<select id="emp" class="form-control">
+				<option value="1">Diagro</option>
+				<option value="2">Competencia</option>
+			</select>
+			
+			<label>Producto</label>
+			<input type="text" id="producto" value="" class="form-control" list="productos">
+			<datalist name="productos" id="productos">
+				<option>POLUX FULL</option>
+				<option>DINCOZEB</option>
+			</datalist>
+			<div class="row">
+				<div class="col-xs-6">
+					<label style="width:100%;">Unidad de medida</label>
+					<input type="text" id="um" value="" class="form-control">
+					<label>Dosis</label>
+					<input type="number" style="text-align:right" id="dosis" onkeyup="toDbl(event, this);" value="" class="form-control">
+				</div>
+				<div class="col-xs-6">
+					<label>Precio</label>
+					<input type="number" style="text-align:right"  id="precio" value=""  onkeyup="toDbl(event, this);" class="form-control">
+					<label>Aplicaciones</label>
+					<input type="number" id="aplicaciones" value=""  class="form-control">
+				</div>
+			</div>
+			<label>Precio por Tonelada</label>
+			<input type="number" id="soja" value="300.00" class="form-control">
+			<br>
+			<div class="row">
+				<div class="col-xs-6">
+					<button class='btn btn-primary btn-lg btn-block' onclick='$("#createRow").click();'><span class='glyphicon glyphicon-plus'></span>AGREGAR</button>
+					<button class='btn btn-warning btn-lg btn-block' style="margin-top:15px;" onclick='clearAll();'><span class='glyphicon glyphicon-ban'></span> LIMPIAR</button>
+				</div>
+				<div class="col-xs-6">
+					<button class='btn btn-success btn-lg btn-block' onclick='salvar();'><span class='glyphicon glyphicon-ok'></span> GUARDAR</button>
+					<button class='btn btn-danger btn-lg btn-block' style="margin-top:15px;" onclick='deletar();'><span class='glyphicon glyphicon-remove'></span>ELIMINAR</button>
+				</div>
+				<div class="col-xs-12">
+					<button class='btn btn-primary btn-lg btn-block' style="margin-top:15px;" onclick='send_email();'><span class='glyphicon glyphicon-envelope'></span> MANDAR POR EMAIL</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-9">
+		<input id="nome" class="form-control">
+	</div>
+	<div class="col-sm-9" id="tblHtml">
+		<h5>Diagro</h5>
+		<table class="table table-bordered" id="t1" style="width:100%;font-family:Arial;font-size:11px;" cellspacing="0" cellpadding="5" border="1"> 
+			<tr>
+				<th>Producto</th>
+				<th>U. de medida</th>
+				<th>Dosis</th>
+				<th>Precio</th>
+				<th>Aplicaciones</th>
+				<th>U$/ha</th>
+				<th>Sc/ha</th>
+				<th>Kg/ha</th>
+				<th>*</th>
+			</tr>
+			<tbody id="result1" style="color:#090;">
+				
+			</tbody>
+			<tr>
+				<th colspan='5' class="text-right">Costo/ha</th>
+				<th class="text-right" id="total">0</th>
+				<th class="text-right" id="total2">0</th>
+				<th class="text-right" id="total3">0</th><td></td>
+			</tr>
+		</table>
+		<h5>Competencia</h5>
+		<table class="table table-bordered" id="t2" style="width:100%;font-family:Arial;font-size:11px;" cellspacing="0" cellpadding="5" border="1">
+			<tr>
+				<th>Producto</th>
+				<th>U. de medida</th>
+				<th>Dosis</th>
+				<th>Precio</th>
+				<th>Aplicaciones</th>
+				<th>U$/ha</th>
+				<th>Sc/ha</th>
+				<th>Kg/ha</th>
+				<th>*</th>
+			</tr>
+			<tbody id="result2" style="color:#900;">
+				
+			</tbody>
+			<tr>
+				<th colspan='5' class="text-right">Costo/ha</th>
+				<th class="text-right" id="total">0</th>
+				<th class="text-right" id="total2">0</th>
+				<th class="text-right" id="total3">0</th>
+				<td></td>
+			</tr>
+		</table>
+		
+	</div>
+	<button id="createRow" style='display:none;' onclick="addRow();">Add</button>
+	<button id="sum" style='display:none;' onclick="autoSum();"></button>
+</div>
+
+        )
+
+    [title] => Costo Beneficio Diagro
+    [model] => template
+    [items] => SimpleXMLElement Object
+        (
+        )
+
+    [details] => SimpleXMLElement Object
+        (
+        )
+
+    [icon] => SimpleXMLElement Object
+        (
+        )
+
+    [callback] => SimpleXMLElement Object
+        (
+        )
+
+    [glyphicon] => none
+    [color] => silver
+    [menu] => SimpleXMLElement Object
+        (
+            [item0] => SimpleXMLElement Object
+                (
+                    [title] => Iniciar sesion
+                    [onclick] => a4pp_login_form();
+                )
+
+            [item1] => SimpleXMLElement Object
+                (
+                    [title] => Restrarse
+                    [onclick] => a4pp_register_form();
+                )
+
+        )
+
+    [async] => SimpleXMLElement Object
+        (
+        )
+
+    [xpath] => SimpleXMLElement Object
+        (
+        )
+
+    [logged] => SimpleXMLElement Object
+        (
+        )
+
+    [update_url] => http://costobeneficio.fijatebien.net/app.php
+    [name] => Costo Beneficio
+    [appHeader2] => #00aa00
+    [template] => table-calc
+    [afterRender] => selectFile();
+)
