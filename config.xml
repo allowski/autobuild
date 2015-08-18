@@ -2,9 +2,9 @@
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		id        = "com.costo.beneficio.diagro"
-		version   = "1.1.8.2">
+		version   = "1.1.8.3">
 		<name>Costo Beneficio</name>
-		<description>Costo Beneficio 1.0.0, Build number 1.1.8.2</description>
+		<description>Costo Beneficio 1.0.0, Build number 1.1.8.3</description>
 		<author href="http://www.fijatebien.net" email="allowski@gmail.com">Alberto Miranda</author>
 		<preference name="phonegap-version" value="3.7.0" />
 		<access origin="*"/>
