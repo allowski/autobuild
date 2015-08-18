@@ -206,6 +206,12 @@ function edit_entry_in_form(indexOf){
 				var strc =  cur.pic || 'img/fallback.png';
 				
 				$("#theImg").attr("src",strc);
+				
+				if(x == "divulgar_imagen"){
+					if(cur[x]=="s"){
+						divulgar("s");
+					}
+				}
 			}
 		
 		}else{
