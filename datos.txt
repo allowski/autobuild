@@ -27,7 +27,10 @@ SimpleXMLElement Object
             [app] => N
             [admin] => N
             [sadmin] => N
-            [hostel] => 16
+            [hostel] => SimpleXMLElement Object
+                (
+                )
+
             [token] => 5058f1af8388633f609cadb75a75dc9d
         )
 

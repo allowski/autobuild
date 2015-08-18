@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<app><id>16</id><path>/var/www/app_16</path><domain>http://testimonios.fijatebien.net/app.php</domain><version></version><a4pp_dir>/var/www</a4pp_dir><disableLog></disableLog><space>app_16</space><appHeader>#2f24b3</appHeader><appHeaderColor>#ffffff</appHeaderColor><appVersion>1.0.0</appVersion><appName>Testimonios</appName><appDomain>com.testimonios.diagro.py</appDomain><appUser><id>0</id><email>nobody@nohost.com</email><nome>Anonymous</nome><level>0</level><app>N</app><admin>N</admin><sadmin>N</sadmin><hostel>16</hostel><token>5058f1af8388633f609cadb75a75dc9d</token></appUser><addCss>
+<app><id>16</id><path>/var/www/app_16</path><domain>http://testimonios.fijatebien.net/app.php</domain><version></version><a4pp_dir>/var/www</a4pp_dir><disableLog></disableLog><space>app_16</space><appHeader>#2f24b3</appHeader><appHeaderColor>#ffffff</appHeaderColor><appVersion>1.0.0</appVersion><appName>Testimonios</appName><appDomain>com.testimonios.diagro.py</appDomain><appUser><id>0</id><email>nobody@nohost.com</email><nome>Anonymous</nome><level>0</level><app>N</app><admin>N</admin><sadmin>N</sadmin><hostel></hostel><token>5058f1af8388633f609cadb75a75dc9d</token></appUser><addCss>
 .material-bar,.navbar.navbar-inverse{
 	background:#2f24b3;
 	background: #ff3019;
