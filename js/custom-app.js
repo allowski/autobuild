@@ -266,16 +266,22 @@ function get_config(indexOf){
 
 function send_entry(entryId){
 	
-	entry = get_entry(entryId);
-
-	toast("Enviando..", "warning", 50000);
+	save_entry();
 	
-	$.post(window.app.update_url, {"apx":"send_data","data": entry}, function(r){
-		if(r === "OK"){
-			toast("Testimonio enviado! OK", "success", 5000);
-		}else{
-			toast("Algo paso mal..", "danger", 5000);
-		}
-	});
+	setTimeout(function(){
+		
+		entry = get_entry(entryId);
+
+		toast("Enviando..", "warning", 50000);
+		
+		$.post(window.app.update_url, {"apx":"send_data","data": entry}, function(r){
+			if(r === "OK"){
+				toast("Testimonio enviado! OK", "success", 5000);
+			}else{
+				toast("Algo paso mal..", "danger", 5000);
+			}
+		});
+	
+	}, 700);
 	
 }
