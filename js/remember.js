@@ -217,7 +217,14 @@ var remember = {
 		var newVal = $('#'+formId).serializeObject();
 		this.collections[collection][indexOf] = newVal;
 		this.save();
-		
+	},
+	'new': function(formId){
+		var frm = document.getElementById(formId);
+		var collection = frm["collection"];
+		frm["indexOf"] = this.collections[collection].length;
+		this.collections[collection].push({});
+		$("#form input").val("");
+		this.saveForm(formId);
 	},
 	'clean': function(collection){
 		
