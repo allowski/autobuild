@@ -197,6 +197,12 @@ var remember = {
 		}
 		
 	},
+	'append': function(formId){
+		var frm = document.getElementById(formId);
+		var collection = frm["collection"];
+		var newVal = $('#'+formId).serializeObject();
+		console.log(newVal);
+	},
 	'clean': function(collection){
 		
 		if(this.isCollection(collection)===true){
