@@ -111,7 +111,7 @@ SimpleXMLElement Object
             [item0] => SimpleXMLElement Object
                 (
                     [id] => 2
-                    [title] => Test
+                    [title] => CS SOJA
                     [model] => template
                     [items] => SimpleXMLElement Object
                         (
@@ -160,6 +160,18 @@ SimpleXMLElement Object
     [color] => silver
     [menu] => SimpleXMLElement Object
         (
+            [item0] => SimpleXMLElement Object
+                (
+                    [title] => Iniciar sesion
+                    [onclick] => a4pp_login_form();
+                )
+
+            [item1] => SimpleXMLElement Object
+                (
+                    [title] => Restrarse
+                    [onclick] => a4pp_register_form();
+                )
+
         )
 
     [async] => SimpleXMLElement Object
