@@ -75,6 +75,12 @@ var remember = {
 				
 				this.collections[collection].push(value);
 				
+				this.log("Pushed");
+				
+				this.log(value);
+				
+				this.log("To "+collection);
+				
 			}else{
 				
 				this.log("Repeated");
