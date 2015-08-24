@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
-<app><id>15</id><path>/var/www/app_15</path><domain>http://costobeneficio.fijatebien.net/app.php</domain><version></version><a4pp_dir>/var/www</a4pp_dir><disableLog></disableLog><space>app_15</space><appHeader>#008000</appHeader><appHeaderColor>#ffffff</appHeaderColor><appVersion>1.0.0</appVersion><appName>Costo Beneficio</appName><appDomain>com.costo.beneficio.diagro</appDomain><appUser><id>0</id><email>nobody@nohost.com</email><nome>Anonymous</nome><level>0</level><app>N</app><admin>N</admin><sadmin>N</sadmin><hostel>15</hostel><token>5058f1af8388633f609cadb75a75dc9d</token></appUser><addCss>
+<app><id>20</id><path>/var/www/app_20</path><domain>http://customforms.fijatebien.net/app.php</domain><version></version><a4pp_dir>/var/www</a4pp_dir><disableLog></disableLog><space>app_20</space><appHeader>0</appHeader><appHeaderColor>0</appHeaderColor><appVersion>1.0.0</appVersion><appName></appName><appDomain>0</appDomain><appUser><id>0</id><email>nobody@nohost.com</email><nome>Anonymous</nome><level>0</level><app>N</app><admin>N</admin><sadmin>N</sadmin><hostel>20</hostel><token>5058f1af8388633f609cadb75a75dc9d</token></appUser><addCss>
 .material-bar,.navbar.navbar-inverse{
-	background:#008000;
+	background:0;
 	background: #ff3019;
-	background: -moz-linear-gradient(top, #008000 0%, #00aa00 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#008000), color-stop(100%,#00aa00));
-	background: -webkit-linear-gradient(top, #008000 0%,#00aa00 100%);
-	background: -o-linear-gradient(top, #008000 0%,#00aa00 100%);
-	background: linear-gradient(to bottom, #008000 0%,#00aa00 100%);
-	color:#ffffff;
+	background: -moz-linear-gradient(top, 0 0%,  100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,0), color-stop(100%,));
+	background: -webkit-linear-gradient(top, 0 0%, 100%);
+	background: -o-linear-gradient(top, 0 0%, 100%);
+	background: linear-gradient(to bottom, 0 0%, 100%);
+	color:0;
 }
 .material-bar .navbar-item{
-	color:#ffffff;
+	color:0;
 }</addCss><lang>es</lang><runJS>console.log("Callback");</runJS><templates><header>&lt;table border="0" cellpadding="0" cellspacing="0" class='table'&gt;&#xD;
 	&lt;tr&gt;&#xD;
 		&lt;td&gt;&#xD;
@@ -60,114 +60,4 @@
 			&lt;% } %&gt;&#xD;
 		&lt;% } %&gt;&#xD;
 	&lt;/ul&gt; &#xD;
-&lt;/div&gt; </listview><table-calc>&lt;div class="row"&gt;
-	&lt;style&gt;
-	.form-control{
-		border:1px solid #ccc !important;
-		text-indent:5px;
-	}
-	&lt;/style&gt;
-	&lt;div class="col-sm-3"&gt;
-		&lt;div id="form" style="padding:8px"&gt;
-			&lt;select id="selFile" onmousedown="selectFile();" onchange="selectChange(this);"class="form-control"&gt;&lt;option value='999'&gt;- Nuevo archivo -&lt;/option&gt;&lt;/select&gt;
-			&lt;hr&gt;
-			&lt;select id="emp" class="form-control"&gt;
-				&lt;option value="1"&gt;Diagro&lt;/option&gt;
-				&lt;option value="2"&gt;Competencia&lt;/option&gt;
-			&lt;/select&gt;
-			
-			&lt;label&gt;Producto&lt;/label&gt;
-			&lt;input type="text" id="producto" value="" class="form-control" list="productos"&gt;
-			&lt;datalist name="productos" id="productos"&gt;
-				&lt;option&gt;POLUX FULL&lt;/option&gt;
-				&lt;option&gt;DINCOZEB&lt;/option&gt;
-			&lt;/datalist&gt;
-			&lt;div class="row"&gt;
-				&lt;div class="col-xs-6"&gt;
-					&lt;label style="width:100%;"&gt;Unidad de medida&lt;/label&gt;
-					&lt;input type="text" id="um" value="" class="form-control"&gt;
-					&lt;label&gt;Dosis&lt;/label&gt;
-					&lt;input type="number" style="text-align:right" id="dosis" onkeyup="toDbl(event, this);" value="" class="form-control"&gt;
-				&lt;/div&gt;
-				&lt;div class="col-xs-6"&gt;
-					&lt;label&gt;Precio&lt;/label&gt;
-					&lt;input type="number" style="text-align:right"  id="precio" value=""  onkeyup="toDbl(event, this);" class="form-control"&gt;
-					&lt;label&gt;Aplicaciones&lt;/label&gt;
-					&lt;input type="number" id="aplicaciones" value=""  class="form-control"&gt;
-				&lt;/div&gt;
-			&lt;/div&gt;
-			&lt;label&gt;Precio por Tonelada&lt;/label&gt;
-			&lt;input type="number" id="soja" value="300.00" class="form-control"&gt;
-			&lt;br&gt;
-			&lt;div class="row"&gt;
-				&lt;div class="col-xs-6"&gt;
-					&lt;button class='btn btn-primary btn-lg btn-block' onclick='$("#createRow").click();'&gt;&lt;span class='glyphicon glyphicon-plus'&gt;&lt;/span&gt;AGREGAR&lt;/button&gt;
-					&lt;button class='btn btn-warning btn-lg btn-block' style="margin-top:15px;" onclick='clearAll();'&gt;&lt;span class='glyphicon glyphicon-ban'&gt;&lt;/span&gt; LIMPIAR&lt;/button&gt;
-				&lt;/div&gt;
-				&lt;div class="col-xs-6"&gt;
-					&lt;button class='btn btn-success btn-lg btn-block' onclick='salvar();'&gt;&lt;span class='glyphicon glyphicon-ok'&gt;&lt;/span&gt; GUARDAR&lt;/button&gt;
-					&lt;button class='btn btn-danger btn-lg btn-block' style="margin-top:15px;" onclick='deletar();'&gt;&lt;span class='glyphicon glyphicon-remove'&gt;&lt;/span&gt;ELIMINAR&lt;/button&gt;
-				&lt;/div&gt;
-				&lt;div class="col-xs-12"&gt;
-					&lt;button class='btn btn-primary btn-lg btn-block' style="margin-top:15px;" onclick='send_email();'&gt;&lt;span class='glyphicon glyphicon-envelope'&gt;&lt;/span&gt; MANDAR POR EMAIL&lt;/button&gt;
-				&lt;/div&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class="col-sm-9"&gt;
-		&lt;input id="nome" class="form-control"&gt;
-	&lt;/div&gt;
-	&lt;div class="col-sm-9" id="tblHtml"&gt;
-		&lt;h5&gt;Diagro&lt;/h5&gt;
-		&lt;table class="table table-bordered" id="t1" style="width:100%;font-family:Arial;font-size:11px;" cellspacing="0" cellpadding="5" border="1"&gt; 
-			&lt;tr&gt;
-				&lt;th&gt;Producto&lt;/th&gt;
-				&lt;th&gt;U. de medida&lt;/th&gt;
-				&lt;th&gt;Dosis&lt;/th&gt;
-				&lt;th&gt;Precio&lt;/th&gt;
-				&lt;th&gt;Aplicaciones&lt;/th&gt;
-				&lt;th&gt;U$/ha&lt;/th&gt;
-				&lt;th&gt;Sc/ha&lt;/th&gt;
-				&lt;th&gt;Kg/ha&lt;/th&gt;
-				&lt;th&gt;*&lt;/th&gt;
-			&lt;/tr&gt;
-			&lt;tbody id="result1" style="color:#090;"&gt;
-				
-			&lt;/tbody&gt;
-			&lt;tr&gt;
-				&lt;th colspan='5' class="text-right"&gt;Costo/ha&lt;/th&gt;
-				&lt;th class="text-right" id="total"&gt;0&lt;/th&gt;
-				&lt;th class="text-right" id="total2"&gt;0&lt;/th&gt;
-				&lt;th class="text-right" id="total3"&gt;0&lt;/th&gt;&lt;td&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-		&lt;/table&gt;
-		&lt;h5&gt;Competencia&lt;/h5&gt;
-		&lt;table class="table table-bordered" id="t2" style="width:100%;font-family:Arial;font-size:11px;" cellspacing="0" cellpadding="5" border="1"&gt;
-			&lt;tr&gt;
-				&lt;th&gt;Producto&lt;/th&gt;
-				&lt;th&gt;U. de medida&lt;/th&gt;
-				&lt;th&gt;Dosis&lt;/th&gt;
-				&lt;th&gt;Precio&lt;/th&gt;
-				&lt;th&gt;Aplicaciones&lt;/th&gt;
-				&lt;th&gt;U$/ha&lt;/th&gt;
-				&lt;th&gt;Sc/ha&lt;/th&gt;
-				&lt;th&gt;Kg/ha&lt;/th&gt;
-				&lt;th&gt;*&lt;/th&gt;
-			&lt;/tr&gt;
-			&lt;tbody id="result2" style="color:#900;"&gt;
-				
-			&lt;/tbody&gt;
-			&lt;tr&gt;
-				&lt;th colspan='5' class="text-right"&gt;Costo/ha&lt;/th&gt;
-				&lt;th class="text-right" id="total"&gt;0&lt;/th&gt;
-				&lt;th class="text-right" id="total2"&gt;0&lt;/th&gt;
-				&lt;th class="text-right" id="total3"&gt;0&lt;/th&gt;
-				&lt;td&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-		&lt;/table&gt;
-		
-	&lt;/div&gt;
-	&lt;button id="createRow" style='display:none;' onclick="addRow();"&gt;Add&lt;/button&gt;
-	&lt;button id="sum" style='display:none;' onclick="autoSum();"&gt;&lt;/button&gt;
-&lt;/div&gt;
-</table-calc></templates><title>Costo Beneficio Diagro</title><model>template</model><items></items><details></details><icon></icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu><item0><title>Iniciar sesion</title><onclick>a4pp_login_form();</onclick></item0><item1><title>Restrarse</title><onclick>a4pp_register_form();</onclick></item1></menu><async></async><xpath></xpath><logged></logged><update_url>http://costobeneficio.fijatebien.net/app.php</update_url><name>Costo Beneficio</name><appHeader2>#00aa00</appHeader2><template>table-calc</template><afterRender>selectFile();</afterRender></app>
+&lt;/div&gt; </listview></templates><title>Custom Forms</title><model>list</model><items></items><details></details><icon></icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu/><async></async><xpath></xpath><logged></logged><update_url>http://customforms.fijatebien.net/app.php</update_url><name></name><appHeader2></appHeader2></app>
