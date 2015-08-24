@@ -239,3 +239,5 @@ var remember = {
 	
 };
 
+remember.init();
+
