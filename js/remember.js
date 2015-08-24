@@ -202,6 +202,7 @@ var remember = {
 		var collection = frm["collection"];
 		var newVal = $('#'+formId).serializeObject();
 		console.log(newVal);
+		this.push(collection, newVal);
 	},
 	'clean': function(collection){
 		
