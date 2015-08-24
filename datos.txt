@@ -105,9 +105,43 @@ SimpleXMLElement Object
         )
 
     [title] => Custom Forms
-    [model] => list
+    [model] => template
     [items] => SimpleXMLElement Object
         (
+            [item0] => SimpleXMLElement Object
+                (
+                    [id] => 2
+                    [title] => Test
+                    [model] => template
+                    [items] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [details] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [icon] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [callback] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [glyphicon] => none
+                    [color] => silver
+                    [menu] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [async] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [xpath] => /0
+                )
+
         )
 
     [details] => SimpleXMLElement Object
@@ -149,4 +183,5 @@ SimpleXMLElement Object
         (
         )
 
+    [template] => listview
 )
