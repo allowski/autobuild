@@ -207,8 +207,17 @@ var remember = {
 		var frm = document.getElementById(formId);
 		var collection = frm["collection"];
 		var newVal = $('#'+formId).serializeObject();
-		console.log(newVal);
 		this.push(collection, newVal);
+		this.save();
+	},
+	'saveForm': function(formId){
+		var frm = document.getElementById(formId);
+		var collection = frm["collection"];
+		var indexOf = frm["indexOf"];
+		var newVal = $('#'+formId).serializeObject();
+		this.collections[collection][indexOf] = newVal;
+		this.save();
+		
 	},
 	'clean': function(collection){
 		
