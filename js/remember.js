@@ -12,7 +12,7 @@ function inCollection(obj, list) {
 var remember = {
 	'collections' : {},
 	'debug'	: true,
-	'logs': "init\n"
+	'logs': "init\n",
 	'load' 	: function(){
 		try{
 			this.collections = JSON.parse(window.localStorage['rememberData']);
