@@ -203,7 +203,22 @@ var remember = {
 		}
 		
 	},
+	'delete': function(formId, mes){
+		
+		var frm = document.getElementById(formId);
+		var collection = frm["collection"];
+		var indexOf = frm["indexOf"];
+		
+		if(mes!==""){
+			if(!cofirm(mes)){
+				return false;
+			}
+		}
+		this.collections[collection].splice(indexOf, 1);
+		this.save();
+	},
 	'append': function(formId){
+		
 		var frm = document.getElementById(formId);
 		var collection = frm["collection"];
 		var newVal = $('#'+formId).serializeObject();

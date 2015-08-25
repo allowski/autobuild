@@ -921,6 +921,14 @@ function openCamera(w, h, q, callback){
 	
 }
 
+function take_photo_id($id){
+	openCamera(600, 400, 90, function(img){
+		var ele = document.getElementById($id);
+		ele.value = img;
+		ele.change();
+	});
+}
+
 function a4pp_destroy_only(){
 
 	$(".content:not(:last):not(:first):not(:eq(1)):not(:eq(2))").remove();
