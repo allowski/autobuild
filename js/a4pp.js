@@ -929,7 +929,10 @@ function take_photo_id($id){
 		console.log("photo taken");
 		console.log("setting #"+$id+" value to:\n "+img);
 		$("#"+$id).val(img).trigger("change");
-		document.getElementById($id).onchange();
+		var ele = document.getElementById($id);
+		ele.value = img;
+		var imgEle = document.getElementById(ele["sento"]);
+		imgEle.src = img;
 	});
 }
 

@@ -158,6 +158,14 @@ var remember = {
 						ele.onchange();
 					}
 					
+					if(ele.hasOwnPropery("sento")){
+						
+						var imgEle = document.getElementById(ele["sento"]);
+						
+						imgEle.src = ele.value;
+						
+					}
+					
 					ele.onchange = function(){
 						
 						remember.collections[collection][indexOf][k] = this.value;

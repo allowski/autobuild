@@ -89,9 +89,9 @@
 	&lt;div class='clearfix'&gt;&lt;/div&gt;
 	&lt;% } else if(cmd=='F:') { %&gt;
 	&lt;div class='clearfix'&gt;&lt;/div&gt;
-	&lt;div class='col-md-4'&gt;
+	&lt;div class='col-md-4' style='margin-bottom:20px;'&gt;
 	&lt;img id='i&lt;% i %&gt;'&gt;
-	&lt;input type='hidden' name='f&lt;% i %&gt;' id='f&lt;% i %&gt;' onchange="$('#i&lt;% i %&gt;').attr('src', $(this).val());"&gt;
+	&lt;input type='hidden' name='f&lt;% i %&gt;' id='f&lt;% i %&gt;' sento="i&lt;% i %&gt;"&gt;
 	&lt;button class='btn btn-warning btn-block btn-lg' onclick='event.preventDefault(); take_photo_id("f&lt;% i %&gt;"); return false;'&gt;
 	&lt;span class='glyphicon glyphicon-camera'&gt;&lt;/span&gt;
 	Tomar foto&lt;/button&gt;
