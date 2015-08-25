@@ -159,7 +159,7 @@ var remember = {
 						ele.onchange();
 					}
 					
-					var attr = $("ele").attr("data-sento");
+					var attr = $(ele).attr("data-sento");
 					
 					if (typeof attr !== typeof undefined && attr !== false) {
 				
