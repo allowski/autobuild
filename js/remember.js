@@ -236,7 +236,6 @@ var remember = {
 		}
 		this.collections[collection].splice(indexOf, 1);
 		this.save();
-		this.new(formId);
 	},
 	'append': function(formId){
 		
