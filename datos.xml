@@ -90,7 +90,7 @@
 	&lt;% } else if(cmd=='F:') { %&gt;
 	&lt;div class='col-md-6'&gt;
 	&lt;img id='i&lt;% i %&gt;'&gt;
-	&lt;input type='text' class='form-control' name='f&lt;% i %&gt;' onchange="$('#i&lt;% i %&gt;').attr('src', $(this).val());"&gt;
+	&lt;input type='text' class='form-control' name='f&lt;% i %&gt;' id='f&lt;% i %&gt;' onchange="$('#i&lt;% i %&gt;').attr('src', $(this).val());"&gt;
 	&lt;button class='btn btn-warning btn-block' onclick='event.preventDefault(); take_photo_id("f&lt;% i %&gt;"); return false;'&gt;
 	&lt;span class='glyphicon glyphicon-photo'&gt;&lt;/span&gt;
 	&lt;% this.campos[i].substr(2, 50) %&gt;&lt;/button&gt;
