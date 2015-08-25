@@ -12,6 +12,7 @@ function inCollection(obj, list) {
 var remember = {
 	'collections' : {},
 	'debug'	: true,
+	'logs': "init\n"
 	'load' 	: function(){
 		try{
 			this.collections = JSON.parse(window.localStorage['rememberData']);
@@ -40,6 +41,7 @@ var remember = {
 		this.load();
 	}, 
 	'log' 	: function(m){
+		this.logs.concat(m+"\n");
 		console.log(m);
 	},
 	'firstRun': function(){
