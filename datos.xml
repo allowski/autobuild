@@ -65,13 +65,13 @@
 	&lt;button class="btn btn-warning" onclick="triggerGoTo('&lt;% this.items[0].xpath %&gt;'); return false;"&gt;
 		&lt;span class='glyphicon glyphicon-share-alt'&gt;&lt;/span&gt;&lt;br&gt; Abrir
 	&lt;/button&gt;
-	&lt;button class="btn btn-success" onclick='remember.new("form"); return false;'&gt;
+	&lt;button class="btn btn-primary" onclick='remember.new("form"); return false;'&gt;
 		&lt;span class='glyphicon glyphicon-plus'&gt;&lt;/span&gt;&lt;br&gt; Nuevo
 	&lt;/button&gt; 
-	&lt;button class="btn btn-warning" onclick='remember.saveForm("form"); return false;'&gt;
+	&lt;button class="btn btn-success" onclick='remember.saveForm("form"); return false;'&gt;
 		&lt;span class='glyphicon glyphicon-ok'&gt;&lt;/span&gt;&lt;br&gt; Guardar
 	&lt;/button&gt;&lt;!-- op --&gt;
-	&lt;button class="btn btn-delete" onclick='remember.delete("form", "Deseas eleminar este item?", function(){ triggerGoTo("&lt;% this.items[0].xpath %&gt;");}); return false;'&gt;
+	&lt;button class="btn btn-danger" onclick='remember.delete("form", "Deseas eleminar este item?", function(){ triggerGoTo("&lt;% this.items[0].xpath %&gt;");}); return false;'&gt;
 		&lt;span class='glyphicon glyphicon-remove'&gt;&lt;/span&gt;&lt;br&gt; Eliminar
 	&lt;/button&gt;
 &lt;/div&gt;
