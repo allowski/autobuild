@@ -158,7 +158,7 @@ var remember = {
 						ele.onchange();
 					}
 					
-					if(ele.hasOwnPropery("sento")){
+					if(ele.hasOwnProperty("sento")){
 						
 						var imgEle = document.getElementById(ele["sento"]);
 						
