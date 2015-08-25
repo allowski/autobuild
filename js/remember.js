@@ -163,13 +163,13 @@ var remember = {
 					
 					if (typeof attr !== typeof undefined && attr !== false) {
 				
-						alert(attr);
+						//setTimeout(function(){
 						
 						var imgEle = document.getElementById(attr);
 						
-						console.log(imgEle);
-						
 						imgEle.src = ele.value;
+						
+						//},50);
 						
 					}
 					
