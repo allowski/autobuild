@@ -922,6 +922,7 @@ function openCamera(w, h, q, callback){
 }
 
 function take_photo_id($id){
+	$("#"+$id).val($id);
 	openCamera(600, 400, 90, function(img){
 		$("#"+$id).val(img);
 	});
