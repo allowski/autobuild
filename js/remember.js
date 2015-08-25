@@ -160,7 +160,11 @@ var remember = {
 					
 					if(ele.hasOwnProperty("sento")){
 						
-						var imgEle = document.getElementById(ele["sento"]);
+						console.log(ele.sento);
+						
+						var imgEle = document.getElementById(ele.sento);
+						
+						console.log(imgEle);
 						
 						imgEle.src = ele.value;
 						
