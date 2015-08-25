@@ -923,10 +923,7 @@ function openCamera(w, h, q, callback){
 
 function take_photo_id($id){
 	openCamera(600, 400, 90, function(img){
-		alert(img);	
-		var ele = document.getElementById($id);
-		ele.value = img;
-		ele.change();
+		$("#"+$id).val(img);
 	});
 }
 
