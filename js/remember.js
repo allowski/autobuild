@@ -134,6 +134,8 @@ var remember = {
 			
 			var frm = document.getElementById(formId);
 			
+			$("#"+formId+" input").val("");
+			
 			frm["collection"] = collection;
 			
 			frm["indexOf"] = indexOf;
