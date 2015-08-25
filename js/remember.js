@@ -159,11 +159,13 @@ var remember = {
 						ele.onchange();
 					}
 					
-					if(ele.hasOwnProperty("sento")){
+					var attr = $("ele").attr("data-sento");
+					
+					if (typeof attr !== typeof undefined && attr !== false) {
+				
+						alert(attr);
 						
-						console.log(ele.sento);
-						
-						var imgEle = document.getElementById(ele.sento);
+						var imgEle = document.getElementById(attr);
 						
 						console.log(imgEle);
 						
