@@ -140,6 +140,7 @@ var remember = {
 			var frm = document.getElementById(formId);
 			
 			$("#"+formId+" input").val("");
+			$("#"+formId+" img").attr("src", "");
 			
 			frm["collection"] = collection;
 			
