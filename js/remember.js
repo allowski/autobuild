@@ -28,6 +28,8 @@ var remember = {
 	},
 	'init'	: function(){
 		
+		this.log("init called");
+		
 		if(!window.localStorage.hasOwnProperty("rememberData")){
 			this.log("Localstorage is empty");
 			this.firstRun();
@@ -45,6 +47,7 @@ var remember = {
 		this.collections = JSON.parse(window.localStorage['rememberData']);
 	},
 	'create'	: function(name){
+		this.log("create called");
 		if(name in this.collections){
 			this.log("Collection '"+name+"' already exists");
 		}else{
@@ -128,6 +131,8 @@ var remember = {
 	},
 	'bind': function(formId, collection, indexOf){
 		
+		this.log("bind called");
+		
 		indexOf = indexOf || 0;
 		
 		if(this.isCollection(collection)===true){
@@ -210,6 +215,8 @@ var remember = {
 	},
 	'delete': function(formId, mes){
 		
+		this.log("delete called");
+		
 		var frm = document.getElementById(formId);
 		var collection = frm["collection"];
 		var indexOf = frm["indexOf"];
@@ -224,6 +231,7 @@ var remember = {
 	},
 	'append': function(formId){
 		
+		this.log("append called");
 		var frm = document.getElementById(formId);
 		var collection = frm["collection"];
 		var newVal = $('#'+formId).serializeObject();
@@ -231,14 +239,17 @@ var remember = {
 		this.save();
 	},
 	'saveForm': function(formId){
+		this.log("saveForm called");
 		var frm = document.getElementById(formId);
 		var collection = frm["collection"];
 		var indexOf = frm["indexOf"];
 		var newVal = $('#'+formId).serializeObject();
 		this.collections[collection][indexOf] = newVal;
+		console.log(newVal);
 		this.save();
 	},
 	'new': function(formId){
+		this.log("new called");
 		var frm = document.getElementById(formId);
 		var collection = frm["collection"];
 		frm["indexOf"] = this.collections[collection].length;

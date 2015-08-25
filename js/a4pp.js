@@ -908,6 +908,8 @@ function setGallery(arr){
 
 function openCamera(w, h, q, callback){
 	
+	console.log("openCamera called");
+	
 	navigator.camera.getPicture(function(imgData){
 		callback( "data:image/jpeg;base64,"+imgData);
 	}, function(){
@@ -922,9 +924,12 @@ function openCamera(w, h, q, callback){
 }
 
 function take_photo_id($id){
-	$("#"+$id).val($id);
+	console.log("take_photo_id called id:"+$id);
 	openCamera(500, 300, 80, function(img){
-		$("#"+$id).val(img).change();
+		console.log("photo taken");
+		console.log("setting #"+$id+" value to:\n "+img);
+		$("#"+$id).val(img).trigger("change");
+		document.getElementById($id).onchange();
 	});
 }
 
