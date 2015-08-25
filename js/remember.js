@@ -149,8 +149,9 @@ var remember = {
 					var ele = document.querySelector("#"+formId+" [name="+k+"]");
 					
 					ele.value = this.collections[collection][indexOf][k];	
-					
-					ele.onchange();
+					if(typeof ele.onchange === "function"){
+						ele.onchange();
+					}
 					
 					ele.onchange = function(){
 						
