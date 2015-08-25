@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
-<app><id>20</id><path>/var/www/app_20</path><domain>http://customforms.fijatebien.net/app.php</domain><version></version><a4pp_dir>/var/www</a4pp_dir><disableLog></disableLog><space>app_20</space><appHeader>0</appHeader><appHeaderColor>0</appHeaderColor><appVersion>1.0.0</appVersion><appName></appName><appDomain>0</appDomain><appUser><id>0</id><email>nobody@nohost.com</email><nome>Anonymous</nome><level>0</level><app>N</app><admin>N</admin><sadmin>N</sadmin><hostel></hostel><token>5058f1af8388633f609cadb75a75dc9d</token></appUser><addCss>
+<app><id>20</id><path>/var/www/app_20</path><domain>http://customforms.fijatebien.net/app.php</domain><version></version><a4pp_dir>/var/www</a4pp_dir><disableLog></disableLog><space>app_20</space><appHeader>#6e6e6e</appHeader><appHeaderColor>#e0e0e0</appHeaderColor><appVersion>1.0.0</appVersion><appName></appName><appDomain>0</appDomain><appUser><id>0</id><email>nobody@nohost.com</email><nome>Anonymous</nome><level>0</level><app>N</app><admin>N</admin><sadmin>N</sadmin><hostel></hostel><token>5058f1af8388633f609cadb75a75dc9d</token></appUser><addCss>
 .material-bar,.navbar.navbar-inverse{
-	background:0;
+	background:#6e6e6e;
 	background: #ff3019;
-	background: -moz-linear-gradient(top, 0 0%,  100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,0), color-stop(100%,));
-	background: -webkit-linear-gradient(top, 0 0%, 100%);
-	background: -o-linear-gradient(top, 0 0%, 100%);
-	background: linear-gradient(to bottom, 0 0%, 100%);
-	color:0;
+	background: -moz-linear-gradient(top, #6e6e6e 0%, #303030 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6e6e6e), color-stop(100%,#303030));
+	background: -webkit-linear-gradient(top, #6e6e6e 0%,#303030 100%);
+	background: -o-linear-gradient(top, #6e6e6e 0%,#303030 100%);
+	background: linear-gradient(to bottom, #6e6e6e 0%,#303030 100%);
+	color:#e0e0e0;
 }
 .material-bar .navbar-item{
-	color:0;
+	color:#e0e0e0;
 }</addCss><lang>es</lang><runJS>console.log("Callback");</runJS><templates><header>&lt;table border="0" cellpadding="0" cellspacing="0" class='table'&gt;&#xD;
 	&lt;tr&gt;&#xD;
 		&lt;td&gt;&#xD;
@@ -75,31 +75,36 @@
 		&lt;span class='glyphicon glyphicon-remove'&gt;&lt;/span&gt;&lt;br&gt; Eliminar
 	&lt;/button&gt;
 &lt;/div&gt;
-&lt;form method='POST' id='form' collection='&lt;% this.collection %&gt;' indexOf="0" style='position:fixed;bottom:60px;top:50px;width:100%;overflow:scroll;'&gt;
+&lt;form method='POST' id='form' collection='&lt;% this.collection %&gt;' indexOf="0" style='position:fixed;bottom:65px;top:50px;width:100%;overflow:scroll;'&gt;
 	&lt;div class='container'&gt;
 	&lt;div class='row'&gt;
 	&lt;% for(var i = 0; i&lt;this.campos.length; i++){ %&gt;
 	&lt;% var cmd = this.campos[i].substr(0, 2); %&gt;
 	&lt;% if(cmd == 'C:'){ %&gt;
-	&lt;div class='col-xs-4 text-right'&gt;&lt;label&gt;&lt;b&gt;&lt;% this.campos[i].substr(2, 50) %&gt;&lt;/b&gt;&lt;/label&gt;&lt;/div&gt;
-	&lt;div class='col-xs-8'&gt;&lt;input type='text' name='f&lt;% i %&gt;' class='form-control'&gt;&lt;/div&gt;
-	&lt;div class='clearfix'&gt;&lt;/div&gt;
+		&lt;div class='col-sm-6'&gt;
+			&lt;div class='row'&gt;
+				&lt;div class='col-xs-4 text-right'&gt;&lt;label style='white-space:nowrap;line-height:45px;'&gt;&lt;% this.campos[i].substr(2, 50) %&gt;&lt;/label&gt;&lt;/div&gt;
+				&lt;div class='col-xs-8'&gt;&lt;input placeholder='(en blanco)' type='text' name='f&lt;% i %&gt;' class='form-control input-lg'&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
 	&lt;% } else if(cmd =='H:'){ %&gt;
-	&lt;h4&gt;&lt;% this.campos[i].substr(2, 50) %&gt;&lt;/h4&gt;
-	&lt;div class='clearfix'&gt;&lt;/div&gt;
+		&lt;div class='clearfix'&gt;&lt;/div&gt;
+		&lt;h4 style='&lt;% (this.campos[i].length&gt;2) ? 'font-size:18px;background:#080;color:white;' : '' %&gt;'&gt;&lt;% this.campos[i].substr(2, 50) %&gt;&lt;/h4&gt;
+		&lt;div class='clearfix'&gt;&lt;/div&gt;
 	&lt;% } else if(cmd=='F:') { %&gt;
-	&lt;div class='clearfix'&gt;&lt;/div&gt;
-	&lt;div class='col-md-4' style='margin-bottom:20px;'&gt;
-	&lt;img id='i&lt;% i %&gt;'&gt;
-	&lt;input type='hidden' name='f&lt;% i %&gt;' id='f&lt;% i %&gt;' data-sento="i&lt;% i %&gt;"&gt;
-	&lt;button class='btn btn-warning btn-block btn-lg' onclick='event.preventDefault(); take_photo_id("f&lt;% i %&gt;"); return false;'&gt;
-	&lt;span class='glyphicon glyphicon-camera'&gt;&lt;/span&gt;
-	Tomar foto&lt;/button&gt;
-	&lt;/div&gt;
-	&lt;div class='col-md-8'&gt;
-		&lt;% this.campos[i].substr(2, 50) %&gt;
-		&lt;input type='text' name='d&lt;% i %&gt;' class='form-control'&gt;
-	&lt;/div&gt;
+		&lt;div class='clearfix'&gt;&lt;/div&gt;
+		&lt;div class='col-md-4' style='margin-bottom:20px;'&gt;
+			&lt;img id='i&lt;% i %&gt;'&gt;
+			&lt;input  placeholder='(en blanco)' type='hidden' name='f&lt;% i %&gt;' id='f&lt;% i %&gt;' data-sento="i&lt;% i %&gt;"&gt;
+			&lt;button class='btn btn-warning btn-block btn-lg' onclick='event.preventDefault(); take_photo_id("f&lt;% i %&gt;"); return false;'&gt;
+				&lt;span class='glyphicon glyphicon-camera'&gt;&lt;/span&gt; 
+				Tomar foto
+			&lt;/button&gt;
+		&lt;/div&gt;
+		&lt;div class='col-md-8'&gt;
+			&lt;% this.campos[i].substr(2, 50) %&gt;
+			&lt;input type='text' name='d&lt;% i %&gt;' class='form-control input-lg'&gt;
+		&lt;/div&gt;
 	&lt;% } %&gt;
 	&lt;% } %&gt;
 	&lt;/div&gt;
@@ -113,4 +118,4 @@
 &lt;/div&gt;</customFormChoser><rememberJS>&lt;pre&gt;
 Logs:
 &lt;% remember.logs %&gt;
-&lt;/pre&gt;	</rememberJS></templates><title>Custom Forms</title><model>template</model><items><item0><id>2</id><title>Logs</title><model>template</model><items></items><details></details><icon></icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath>/0</xpath><template>rememberJS</template></item0><item1><id>3</id><title>Dessecacion- POLUX FULL+ARES CLEAN	</title><model>template</model><items><item0><id>4</id><title>Dessecacion- POLUX FULL+ARES CLEAN	</title><model>template</model><items></items><details></details><icon></icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath>/1/0</xpath><template>customFormChoser</template><collection>a661614969a4a1979f2f8408a880921e</collection><listdisplay>f5</listdisplay></item0></items><details></details><icon></icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath>/1</xpath><template>customForm</template><campos><0>H:Dessecacion- POLUX FULL+ARES CLEAN	</0><1>C:Nome RTV:</1><2>C:Sucursal:</2><3>H:</3><4>H:Dados Cliente</4><5>C:Nome Produtor:</5><6>C:Dire&#xE7;&#xE3;o:</6><7>C:Area Total de plantio(ha):</7><8>C:Cultura:</8><9>H:</9><10>H:Dados Aplica&#xE7;&#xE3;o</10><11>C:Data aplica&#xE7;&#xE3;o:</11><12>C:Area total de aplica&#xE7;&#xE3;o(ha):</12><13>C:Horario de aplica&#xE7;&#xE3;o:</13><14>C:Vaz&#xE3;o(l/ha):</14><15>C:Condi&#xE7;&#xF5;es Climaticas:</15><16>C:Temperatura Aprox:</16><17>C:Observa&#xE7;&#xF5;es:</17><18>C:Principais Plantas Daninhas:</18><19>H:Produto Utilizados Diagro	Dose(Kg-l/ha)</19><20>C:Ares Clean</20><21>C:Polux</21><22>C:Granate</22><23>C:Aller Biw</23><24>C:Coraza</24><25>H:Produto Utilizados Competencia	Dose(Kg-l/ha)</25><26>C:Ares Clean</26><27>C:Polux</27><28>C:Granate</28><29>C:Aller Biw</29><30>C:Coraza</30><31>H: </31><32>H:Avalia&#xE7;&#xF5;es de Eficiencia</32><33>H:Dia da Aplica&#xE7;&#xE3;o	Fotos / Coment&#xE1;rios</33><34>F:7 a 10 dias	Fotos / Coment&#xE1;rios</34><35>F:15 a 21 dias	Fotos / Coment&#xE1;rios</35><36>F:28 a 35 dias	Fotos / Coment&#xE1;rios</36></campos><beforeRender>remember.create('a661614969a4a1979f2f8408a880921e');</beforeRender><afterRender>remember.bind('form', 'a661614969a4a1979f2f8408a880921e')</afterRender><collection>a661614969a4a1979f2f8408a880921e</collection></item1><item2><id>5</id><title>Desecacion</title><model>template</model><items><item0><id>6</id><title>Desecacion</title><model>template</model><items></items><details></details><icon></icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath>/2/0</xpath><template>customFormChoser</template><collection>2b05f5905bb0578388e521011848c69d</collection><listdisplay>f5</listdisplay></item0></items><details></details><icon></icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath>/2</xpath><template>customForm</template><campos><0>H:test1</0><1>C:testing</1></campos><beforeRender>remember.create('2b05f5905bb0578388e521011848c69d');</beforeRender><afterRender>remember.bind('form', '2b05f5905bb0578388e521011848c69d')</afterRender><collection>2b05f5905bb0578388e521011848c69d</collection></item2></items><details></details><icon></icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu><item0><title>Iniciar sesion</title><onclick>a4pp_login_form();</onclick></item0><item1><title>Restrarse</title><onclick>a4pp_register_form();</onclick></item1></menu><menubar/><async></async><xpath></xpath><logged></logged><update_url>http://customforms.fijatebien.net/app.php</update_url><name></name><appHeader2></appHeader2><template>listview</template></app>
+&lt;/pre&gt;	</rememberJS></templates><title>Custom Forms</title><model>template</model><items><item0><id>2</id><title>Logs</title><model>template</model><items></items><details></details><icon></icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath>/0</xpath><template>rememberJS</template></item0><item1><id>3</id><title>Dessecacion- POLUX FULL+ARES CLEAN	</title><model>template</model><items><item0><id>4</id><title>Dessecacion- POLUX FULL+ARES CLEAN	</title><model>template</model><items></items><details></details><icon></icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath>/1/0</xpath><template>customFormChoser</template><collection>a661614969a4a1979f2f8408a880921e</collection><listdisplay>f5</listdisplay></item0></items><details></details><icon></icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath>/1</xpath><template>customForm</template><campos><0>H:Dessecacion- POLUX FULL+ARES CLEAN	</0><1>C:Nome RTV:</1><2>C:Sucursal:</2><3>H:</3><4>H:Dados Cliente</4><5>C:Nome Produtor:</5><6>C:Dire&#xE7;&#xE3;o:</6><7>C:Area Total de plantio(ha):</7><8>C:Cultura:</8><9>H:</9><10>H:Dados Aplica&#xE7;&#xE3;o</10><11>C:Data aplica&#xE7;&#xE3;o:</11><12>C:Area total de aplica&#xE7;&#xE3;o(ha):</12><13>C:Horario de aplica&#xE7;&#xE3;o:</13><14>C:Vaz&#xE3;o(l/ha):</14><15>C:Condi&#xE7;&#xF5;es Climaticas:</15><16>C:Temperatura Aprox:</16><17>C:Observa&#xE7;&#xF5;es:</17><18>C:Principais Plantas Daninhas:</18><19>H:Produto Utilizados Diagro	Dose(Kg-l/ha)</19><20>C:Ares Clean</20><21>C:Polux</21><22>C:Granate</22><23>C:Aller Biw</23><24>C:Coraza</24><25>H:Produto Utilizados Competencia	Dose(Kg-l/ha)</25><26>C:Ares Clean</26><27>C:Polux</27><28>C:Granate</28><29>C:Aller Biw</29><30>C:Coraza</30><31>H: </31><32>H:Avalia&#xE7;&#xF5;es de Eficiencia</32><33>H:Dia da Aplica&#xE7;&#xE3;o	Fotos / Coment&#xE1;rios</33><34>F:7 a 10 dias	Fotos / Coment&#xE1;rios</34><35>F:15 a 21 dias	Fotos / Coment&#xE1;rios</35><36>F:28 a 35 dias	Fotos / Coment&#xE1;rios</36></campos><beforeRender>remember.create('a661614969a4a1979f2f8408a880921e');</beforeRender><afterRender>remember.bind('form', 'a661614969a4a1979f2f8408a880921e')</afterRender><collection>a661614969a4a1979f2f8408a880921e</collection></item1><item2><id>5</id><title>Desecacion</title><model>template</model><items><item0><id>6</id><title>Desecacion</title><model>template</model><items></items><details></details><icon></icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath>/2/0</xpath><template>customFormChoser</template><collection>2b05f5905bb0578388e521011848c69d</collection><listdisplay>f5</listdisplay></item0></items><details></details><icon></icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath>/2</xpath><template>customForm</template><campos><0>H:test1</0><1>C:testing</1></campos><beforeRender>remember.create('2b05f5905bb0578388e521011848c69d');</beforeRender><afterRender>remember.bind('form', '2b05f5905bb0578388e521011848c69d')</afterRender><collection>2b05f5905bb0578388e521011848c69d</collection></item2></items><details></details><icon></icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu><item0><title>Iniciar sesion</title><onclick>a4pp_login_form();</onclick></item0><item1><title>Restrarse</title><onclick>a4pp_register_form();</onclick></item1></menu><menubar/><async></async><xpath></xpath><logged></logged><update_url>http://customforms.fijatebien.net/app.php</update_url><name></name><appHeader2>#303030</appHeader2><template>listview</template></app>
