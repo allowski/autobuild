@@ -41,7 +41,7 @@ var remember = {
 		this.load();
 	}, 
 	'log' 	: function(m){
-		this.logs.concat(m+"\n");
+		this.logs += m+"\n";
 		console.log(m);
 	},
 	'firstRun': function(){
