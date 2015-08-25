@@ -107,7 +107,7 @@
 &lt;/form&gt;	</customForm><customFormChoser>&lt;div class='container'&gt;
 &lt;div class='list-group'&gt;
 	&lt;% for(var x in remember.collections[this.collection]){ %&gt;
-	&lt;a href="#" class='list-group-item' onclick="history.back();setTimeout(function(){remember.bind('form', '&lt;% this.collection %&gt;', '&lt;% x %&gt;');}, 100); return false;"&gt;Item &lt;% remember.collections[this.collection][x][this.listdisplay] %&gt;&lt;/a&gt;
+	&lt;a href="#" class='list-group-item' onclick="history.back();setTimeout(function(){remember.bind('form', '&lt;% this.collection %&gt;', '&lt;% x %&gt;');}, 100); return false;"&gt;&lt;% remember.collections[this.collection][x][this.listdisplay] || i('Sem titulo', "Sin titulo", 'Untitled') %&gt;&lt;/a&gt;
 	&lt;% } %&gt;
 &lt;/div&gt;
 &lt;/div&gt;</customFormChoser><rememberJS>&lt;pre&gt;
