@@ -925,14 +925,13 @@ function openCamera(w, h, q, callback){
 
 function take_photo_id($id){
 	console.log("take_photo_id called id:"+$id);
+	inp = $("#"+$id);
 	openCamera(500, 300, 80, function(img){
 		console.log("photo taken");
 		console.log("setting #"+$id+" value to:\n "+img);
-		$("#"+$id).val(img).trigger("change");
-		var ele = document.getElementById($id);
-		ele.value = img;
-		console.log(ele.sento);
-		var imgEle = document.getElementById(ele.sento);
+		inp.val(img).trigger("change");
+		console.log(inp.prop("sento"));
+		var imgEle = document.getElementById(inp.prop("sento"));
 		console.log(imgEle);
 		imgEle.src = img;
 	});
