@@ -221,7 +221,7 @@ var remember = {
 		}
 		
 	},
-	'delete': function(formId, mes){
+	'delete': function(formId, mes, callback){
 		
 		this.log("delete called");
 		
@@ -233,6 +233,9 @@ var remember = {
 			if(!confirm(mes)){
 				return false;
 			}
+		}
+		if(typeof callback === 'function'){
+			callback();
 		}
 		this.collections[collection].splice(indexOf, 1);
 		this.save();

@@ -71,7 +71,7 @@
 	&lt;button class="btn btn-warning" onclick='remember.saveForm("form"); return false;'&gt;
 		&lt;span class='glyphicon glyphicon-ok'&gt;&lt;/span&gt;&lt;br&gt; Guardar
 	&lt;/button&gt;&lt;!-- op --&gt;
-	&lt;button class="btn btn-delete" onclick='remember.delete("form", "Deseas eleminar este item?"); triggerGoTo('&lt;% this.items[0].xpath %&gt;'); return false;'&gt;
+	&lt;button class="btn btn-delete" onclick='remember.delete("form", "Deseas eleminar este item?", function(){ triggerGoTo("&lt;% this.items[0].xpath %&gt;");}); return false;'&gt;
 		&lt;span class='glyphicon glyphicon-remove'&gt;&lt;/span&gt;&lt;br&gt; Eliminar
 	&lt;/button&gt;
 &lt;/div&gt;
