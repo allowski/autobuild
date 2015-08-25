@@ -148,6 +148,8 @@ var remember = {
 					
 					ele.value = this.collections[collection][indexOf][k];	
 					
+					ele.onchange();
+					
 					ele.onchange = function(){
 						
 						remember.collections[collection][indexOf][k] = this.value;
