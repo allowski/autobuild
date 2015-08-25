@@ -230,7 +230,7 @@ var remember = {
 		var indexOf = frm["indexOf"];
 		
 		if(mes!==""){
-			if(!cofirm(mes)){
+			if(!confirm(mes)){
 				return false;
 			}
 		}
