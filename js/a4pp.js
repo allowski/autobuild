@@ -931,9 +931,10 @@ function take_photo_id($id){
 		console.log("setting #"+$id+" value to:\n "+img);
 		$(inp).val(img).trigger("change");
 		alert($(inp).attr("data-sento"));
-		var imgEle = document.getElementById($(inp).attr("data-sento"));
+		var imgEle = "#"+$(inp).attr("data-sento");
 		console.log(imgEle);
-		imgEle.src = img;
+		alert($(imgEle).length);
+		$(imgEle).attr("src", img);
 	});
 }
 
