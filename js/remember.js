@@ -157,9 +157,6 @@ var remember = {
 					var ele = document.querySelector("#"+formId+" [name="+k+"]");
 					
 					ele.value = this.collections[collection][indexOf][k];	
-					if(typeof ele.onchange === "function"){
-						ele.onchange();
-					}
 					
 					var attr = $(ele).attr("data-sento");
 					
@@ -172,12 +169,6 @@ var remember = {
 						imgEle.src = ele.value;
 						
 						//},50);
-						
-					}
-					
-					ele.onchange = function(){
-						
-						remember.collections[collection][indexOf][k] = this.value;
 						
 					}
 					
