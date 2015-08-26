@@ -74,6 +74,9 @@
 	&lt;button class="btn btn-danger" onclick='remember.delete("form", "Deseas eleminar este item?", function(){ triggerGoTo("&lt;% this.items[0].xpath %&gt;");}); return false;'&gt;
 		&lt;span class='glyphicon glyphicon-remove'&gt;&lt;/span&gt;&lt;br&gt; Eliminar
 	&lt;/button&gt;
+	&lt;a hrer='geo:geo:0,0?q=file:///storage/emulated/0/Download/KML_examples.kml'  class="btn btn-danger" target='_system'&gt;
+		&lt;span class='glyphicon glyphicon-remove'&gt;&lt;/span&gt;&lt;br&gt; Eliminar
+	&lt;/a&gt;
 &lt;/div&gt;
 &lt;form method='POST' id='form' collection='&lt;% this.collection %&gt;' indexOf="0" style='position:fixed;bottom:65px;top:50px;width:100%;overflow:scroll;'&gt;
 	&lt;div class='container'&gt;

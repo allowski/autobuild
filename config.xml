@@ -2,9 +2,9 @@
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		id        = "com.customforms.diagro"
-		version   = "1.2.5.7">
+		version   = "1.2.5.8">
 		<name>Desarrollo de Produc</name>
-		<description>Desarrollo de Produc 1.0.0, Build number 1.2.5.7</description>
+		<description>Desarrollo de Produc 1.0.0, Build number 1.2.5.8</description>
 		<author href="http://www.fijatebien.net" email="allowski@gmail.com">Alberto Miranda</author>
 		<preference name="phonegap-version" value="3.7.0" />
 		<access origin="*"/>
