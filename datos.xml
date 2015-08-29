@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<app><id>72</id><path>/var/www/app_72</path><domain>http://covepa.fijatebien.net/app.php</domain><version></version><a4pp_dir>/var/www</a4pp_dir><disableLog></disableLog><space>app_72</space><appHeader>#1d3070</appHeader><appHeaderColor>#ffffff</appHeaderColor><appVersion>995</appVersion><appName>COVEPA</appName><appDomain>fijate.covepa.org</appDomain><appUser><id>0</id><email>nobody@nohost.com</email><nome>Anonymous</nome><level>0</level><app>N</app><admin>N</admin><sadmin>N</sadmin><hostel>72</hostel><token>5058f1af8388633f609cadb75a75dc9d</token></appUser><addCss>
+<app><id>72</id><path>/var/www/app_72</path><domain>http://covepa.fijatebien.net/app.php</domain><version></version><a4pp_dir>/var/www</a4pp_dir><disableLog></disableLog><space>app_72</space><appHeader>#1d3070</appHeader><appHeaderColor>#ffffff</appHeaderColor><appVersion>995</appVersion><appName>COVEPA</appName><appDomain>com.covepa.app.py</appDomain><appUser><id>0</id><email>nobody@nohost.com</email><nome>Anonymous</nome><level>0</level><app>N</app><admin>N</admin><sadmin>N</sadmin><hostel>72</hostel><token>5058f1af8388633f609cadb75a75dc9d</token></appUser><addCss>
 .material-bar,.navbar.navbar-inverse{
 	background:#1d3070;
 	background: #ff3019;
