@@ -106,6 +106,82 @@ SimpleXMLElement Object
     [model] => list
     [items] => SimpleXMLElement Object
         (
+            [item0] => SimpleXMLElement Object
+                (
+                    [id] => 2
+                    [title] => Acessar sistema
+                    [model] => template
+                    [items] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [details] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [icon] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [callback] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [glyphicon] => none
+                    [color] => silver
+                    [menu] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [menubar] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [async] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [xpath] => /0
+                )
+
+            [item1] => SimpleXMLElement Object
+                (
+                    [id] => 3
+                    [title] => Abrir leitor
+                    [model] => template
+                    [items] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [details] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [icon] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [callback] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [glyphicon] => none
+                    [color] => silver
+                    [menu] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [menubar] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [async] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [xpath] => /1
+                )
+
         )
 
     [details] => SimpleXMLElement Object
@@ -124,6 +200,18 @@ SimpleXMLElement Object
     [color] => silver
     [menu] => SimpleXMLElement Object
         (
+            [item0] => SimpleXMLElement Object
+                (
+                    [title] => Iniciar sesion
+                    [onclick] => a4pp_login_form();
+                )
+
+            [item1] => SimpleXMLElement Object
+                (
+                    [title] => Restrarse
+                    [onclick] => a4pp_register_form();
+                )
+
         )
 
     [menubar] => SimpleXMLElement Object
