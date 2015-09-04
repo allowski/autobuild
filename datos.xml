@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
-<app><id>20</id><path>/var/www/app_20</path><domain>http://customforms.fijatebien.net/app.php</domain><version></version><a4pp_dir>/var/www</a4pp_dir><disableLog></disableLog><space>app_20</space><appHeader>#6e6e6e</appHeader><appHeaderColor>#e0e0e0</appHeaderColor><appVersion>1.0.0</appVersion><appName>Desarrollo de Produc</appName><appDomain>com.customforms.diagro</appDomain><appUser><id>0</id><email>nobody@nohost.com</email><nome>Anonymous</nome><level>0</level><app>N</app><admin>N</admin><sadmin>N</sadmin><hostel>20</hostel><token>5058f1af8388633f609cadb75a75dc9d</token></appUser><addCss>
+<app><id>25</id><path>/var/www/app_25</path><domain>http://iparana.fijatebien.net/app.php</domain><version></version><a4pp_dir>/var/www</a4pp_dir><disableLog></disableLog><space>app_25</space><appHeader>#253478</appHeader><appHeaderColor>#ffffff</appHeaderColor><appVersion>1.0.0</appVersion><appName>Importadora Parana</appName><appDomain>com.iparana.prod</appDomain><appUser><id>0</id><email>nobody@nohost.com</email><nome>Anonymous</nome><level>0</level><app>N</app><admin>N</admin><sadmin>N</sadmin><hostel>25</hostel><token>5058f1af8388633f609cadb75a75dc9d</token></appUser><addCss>
 .material-bar,.navbar.navbar-inverse{
-	background:#6e6e6e;
+	background:#253478;
 	background: #ff3019;
-	background: -moz-linear-gradient(top, #6e6e6e 0%, #303030 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6e6e6e), color-stop(100%,#303030));
-	background: -webkit-linear-gradient(top, #6e6e6e 0%,#303030 100%);
-	background: -o-linear-gradient(top, #6e6e6e 0%,#303030 100%);
-	background: linear-gradient(to bottom, #6e6e6e 0%,#303030 100%);
-	color:#e0e0e0;
+	background: -moz-linear-gradient(top, #253478 0%, #273369 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#253478), color-stop(100%,#273369));
+	background: -webkit-linear-gradient(top, #253478 0%,#273369 100%);
+	background: -o-linear-gradient(top, #253478 0%,#273369 100%);
+	background: linear-gradient(to bottom, #253478 0%,#273369 100%);
+	color:#ffffff;
 }
 .material-bar .navbar-item{
-	color:#e0e0e0;
+	color:#ffffff;
 }</addCss><lang>es</lang><runJS>console.log("Callback");</runJS><templates><header>&lt;table border="0" cellpadding="0" cellspacing="0" class='table'&gt;&#xD;
 	&lt;tr&gt;&#xD;
 		&lt;td&gt;&#xD;
@@ -61,64 +61,4 @@
 			&lt;% } %&gt;&#xD;
 		&lt;% } %&gt;&#xD;
 	&lt;/ul&gt; &#xD;
-&lt;/div&gt; </listview><mi>&lt;h1&gt;&lt;% this.title %&gt;&lt;/h1&gt;</mi><customForm>&lt;div class="panel-footer text-center" id="navigator" style='position:fixed;bottom:0px;width:100%;left:0px;padding:5px 0px;'&gt;&#xD;
-	&lt;button class="btn btn-warning" onclick="triggerGoTo('&lt;% this.items[0].xpath %&gt;'); return false;"&gt;&#xD;
-		&lt;span class='glyphicon glyphicon-share-alt'&gt;&lt;/span&gt;&lt;br&gt; Abrir&#xD;
-	&lt;/button&gt;&#xD;
-	&lt;button class="btn btn-primary" onclick='remember.new("form"); return false;'&gt;&#xD;
-		&lt;span class='glyphicon glyphicon-plus'&gt;&lt;/span&gt;&lt;br&gt; Nuevo&#xD;
-	&lt;/button&gt; &#xD;
-	&lt;button class="btn btn-success" onclick='remember.saveForm("form"); return false;'&gt;&#xD;
-		&lt;span class='glyphicon glyphicon-ok'&gt;&lt;/span&gt;&lt;br&gt; Guardar&#xD;
-	&lt;/button&gt;&lt;!-- op --&gt;&#xD;
-	&lt;button class="btn btn-danger" onclick='remember.delete("form", "Deseas eleminar este item?", function(){ triggerGoTo("&lt;% this.items[0].xpath %&gt;");}); return false;'&gt;&#xD;
-		&lt;span class='glyphicon glyphicon-remove'&gt;&lt;/span&gt;&lt;br&gt; Eliminar&#xD;
-	&lt;/button&gt;&#xD;
-	&lt;a href='geo:0,0?q=file:///storage/emulated/0/Download/KML_examples.kml'  class="btn btn-danger" target='_system'&gt;&#xD;
-		&lt;span class='glyphicon glyphicon-remove'&gt;&lt;/span&gt;&lt;br&gt; Eliminar&#xD;
-	&lt;/a&gt;&#xD;
-&lt;/div&gt;&#xD;
-&lt;form method='POST' id='form' collection='&lt;% this.collection %&gt;' indexOf="0" style='position:fixed;bottom:65px;top:50px;width:100%;overflow:scroll;'&gt;&#xD;
-	&lt;div class='container'&gt;&#xD;
-	&lt;div class='row row-no-padding'&gt;&#xD;
-	&lt;% for(var i = 0; i&lt;this.campos.length; i++){ %&gt;&#xD;
-	&lt;% var cmd = this.campos[i].substr(0, 2); %&gt;&#xD;
-	&lt;% if(cmd == 'C:'){ %&gt;&#xD;
-		&lt;div class='col-sm-6'&gt;&#xD;
-			&lt;div class='row'&gt;&#xD;
-				&lt;div class='col-xs-4 text-right'&gt;&lt;label style='white-space:nowrap;line-height:45px;'&gt;&lt;% this.campos[i].substr(2, 50) %&gt;&lt;/label&gt;&lt;/div&gt;&#xD;
-				&lt;div class='col-xs-8'&gt;&lt;input placeholder='(en blanco)' type='text' name='f&lt;% i %&gt;' class='form-control input-lg'&gt;&lt;/div&gt;&#xD;
-			&lt;/div&gt;&#xD;
-		&lt;/div&gt;&#xD;
-	&lt;% } else if(cmd =='H:'){ %&gt;&#xD;
-		&lt;div class='clearfix'&gt;&lt;/div&gt;&#xD;
-		&lt;h4 style='&lt;% (this.campos[i].length&gt;2) ? 'font-size:18px;background:#080;color:white;' : '' %&gt;'&gt;&lt;% this.campos[i].substr(2, 50) %&gt;&lt;/h4&gt;&#xD;
-		&lt;div class='clearfix'&gt;&lt;/div&gt;&#xD;
-	&lt;% } else if(cmd=='F:') { %&gt;&#xD;
-		&lt;div class='clearfix'&gt;&lt;/div&gt;&#xD;
-		&lt;div class='col-md-4' style='margin-bottom:20px;'&gt;&#xD;
-			&lt;img id='i&lt;% i %&gt;'&gt;&#xD;
-			&lt;input  placeholder='(en blanco)' type='hidden' name='f&lt;% i %&gt;' id='f&lt;% i %&gt;' data-sento="i&lt;% i %&gt;"&gt;&#xD;
-			&lt;button class='btn btn-warning btn-block btn-lg' onclick='event.preventDefault(); take_photo_id("f&lt;% i %&gt;"); return false;'&gt;&#xD;
-				&lt;span class='glyphicon glyphicon-camera'&gt;&lt;/span&gt; &#xD;
-				Tomar foto&#xD;
-			&lt;/button&gt;&#xD;
-		&lt;/div&gt;&#xD;
-		&lt;div class='col-md-8'&gt;&#xD;
-			&lt;% this.campos[i].substr(2, 50) %&gt;&#xD;
-			&lt;input type='text' name='d&lt;% i %&gt;' class='form-control input-lg'&gt;&#xD;
-		&lt;/div&gt;&#xD;
-	&lt;% } %&gt;&#xD;
-	&lt;% } %&gt;&#xD;
-	&lt;/div&gt;&#xD;
-	&lt;/div&gt;&#xD;
-&lt;/form&gt;	</customForm><customFormChoser>&lt;div class='container'&gt;&#xD;
-&lt;div class='list-group'&gt;&#xD;
-	&lt;% for(var x in remember.collections[this.collection]){ %&gt;&#xD;
-	&lt;a href="#" class='list-group-item' onclick="history.back();setTimeout(function(){remember.bind('form', '&lt;% this.collection %&gt;', '&lt;% x %&gt;');}, 100); return false;"&gt;&lt;% remember.collections[this.collection][x][this.listdisplay] || i('Sem titulo', "Sin titulo", 'Untitled') %&gt;&lt;/a&gt;&#xD;
-	&lt;% } %&gt;&#xD;
-&lt;/div&gt;&#xD;
-&lt;/div&gt;</customFormChoser><rememberJS>&lt;pre&gt;&#xD;
-Logs:&#xD;
-&lt;% remember.logs %&gt;&#xD;
-&lt;/pre&gt;	</rememberJS></templates><title>Desarrollo de Productos</title><model>template</model><items><item0><id>2</id><title>Logs</title><model>template</model><items></items><details></details><icon></icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath>/0</xpath><template>rememberJS</template></item0><item1><id>3</id><title>Mi Item</title><model>template</model><items></items><details></details><icon></icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath>/1</xpath><template>table</template><table><prueba>prueba</prueba></table></item1><item2><id>4</id><title>Dessecacion- POLUX FULL+ARES CLEAN	</title><model>template</model><items><item0><id>5</id><title>Dessecacion- POLUX FULL+ARES CLEAN	</title><model>template</model><items></items><details></details><icon></icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath>/2/0</xpath><template>customFormChoser</template><collection>a661614969a4a1979f2f8408a880921e</collection><listdisplay>f5</listdisplay></item0></items><details></details><icon></icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath>/2</xpath><template>customForm</template><campos><0>H:Dessecacion- POLUX FULL+ARES CLEAN	</0><1>C:Nome RTV:</1><2>C:Sucursal:</2><3>H:</3><4>H:Dados Cliente</4><5>C:Nome Produtor:</5><6>C:Dire&#xE7;&#xE3;o:</6><7>C:Area Total de plantio(ha):</7><8>C:Cultura:</8><9>H:</9><10>H:Dados Aplica&#xE7;&#xE3;o</10><11>C:Data aplica&#xE7;&#xE3;o:</11><12>C:Area total de aplica&#xE7;&#xE3;o(ha):</12><13>C:Horario de aplica&#xE7;&#xE3;o:</13><14>C:Vaz&#xE3;o(l/ha):</14><15>C:Condi&#xE7;&#xF5;es Climaticas:</15><16>C:Temperatura Aprox:</16><17>C:Observa&#xE7;&#xF5;es:</17><18>C:Principais Plantas Daninhas:</18><19>H:Produto Utilizados Diagro	Dose(Kg-l/ha)</19><20>C:Ares Clean</20><21>C:Polux</21><22>C:Granate</22><23>C:Aller Biw</23><24>C:Coraza</24><25>H:Produto Utilizados Competencia	Dose(Kg-l/ha)</25><26>C:Ares Clean</26><27>C:Polux</27><28>C:Granate</28><29>C:Aller Biw</29><30>C:Coraza</30><31>H:</31><32>H:Avalia&#xE7;&#xF5;es de Eficiencia</32><33>H:Dia da Aplica&#xE7;&#xE3;o	Fotos / Coment&#xE1;rios</33><34>F:7 a 10 dias	Fotos / Coment&#xE1;rios</34><35>F:15 a 21 dias	Fotos / Coment&#xE1;rios</35><36>F:28 a 35 dias	Fotos / Coment&#xE1;rios</36></campos><beforeRender>remember.create('a661614969a4a1979f2f8408a880921e');</beforeRender><afterRender>remember.bind('form', 'a661614969a4a1979f2f8408a880921e')</afterRender><collection>a661614969a4a1979f2f8408a880921e</collection></item2><item3><id>6</id><title>Desecacion</title><model>template</model><items><item0><id>7</id><title>Desecacion</title><model>template</model><items></items><details></details><icon></icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath>/3/0</xpath><template>customFormChoser</template><collection>2b05f5905bb0578388e521011848c69d</collection><listdisplay>f5</listdisplay></item0></items><details></details><icon></icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath>/3</xpath><template>customForm</template><campos><0>H:test1</0><1>C:testing</1></campos><beforeRender>remember.create('2b05f5905bb0578388e521011848c69d');</beforeRender><afterRender>remember.bind('form', '2b05f5905bb0578388e521011848c69d')</afterRender><collection>2b05f5905bb0578388e521011848c69d</collection></item3></items><details></details><icon></icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu><item0><title>Iniciar sesion</title><onclick>a4pp_login_form();</onclick></item0><item1><title>Restrarse</title><onclick>a4pp_register_form();</onclick></item1></menu><menubar/><async></async><xpath></xpath><logged></logged><update_url>http://customforms.fijatebien.net/app.php</update_url><name>Desarrollo de Produc</name><appHeader2>#303030</appHeader2><template>header</template></app>
+&lt;/div&gt; </listview></templates><title>Importadora Parana S.A.</title><model>list</model><items></items><details></details><icon></icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath></xpath><logged></logged><update_url>http://iparana.fijatebien.net/app.php</update_url><name>Importadora Parana</name><appHeader2>#273369</appHeader2></app>

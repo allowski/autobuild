@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
-		id        = "com.customforms.diagro"
-		version   = "991.2.7.1">
-		<name>Desarrollo de Produc</name>
-		<description>Desarrollo de Produc 1.0.0, Build number 991.2.7.1</description>
+		id        = "com.iparana.prod"
+		version   = "991.2.7.2">
+		<name>Importadora Parana</name>
+		<description>Importadora Parana 1.0.0, Build number 991.2.7.2</description>
 		<author href="http://www.fijatebien.net" email="allowski@gmail.com">Alberto Miranda</author>
 		<preference name="phonegap-version" value="3.7.0" />
 		<access origin="*"/>

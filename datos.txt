@@ -1,0 +1,148 @@
+SimpleXMLElement Object
+(
+    [id] => 25
+    [path] => /var/www/app_25
+    [domain] => http://iparana.fijatebien.net/app.php
+    [version] => SimpleXMLElement Object
+        (
+        )
+
+    [a4pp_dir] => /var/www
+    [disableLog] => SimpleXMLElement Object
+        (
+        )
+
+    [space] => app_25
+    [appHeader] => #253478
+    [appHeaderColor] => #ffffff
+    [appVersion] => 1.0.0
+    [appName] => Importadora Parana
+    [appDomain] => com.iparana.prod
+    [appUser] => SimpleXMLElement Object
+        (
+            [id] => 0
+            [email] => nobody@nohost.com
+            [nome] => Anonymous
+            [level] => 0
+            [app] => N
+            [admin] => N
+            [sadmin] => N
+            [hostel] => 25
+            [token] => 5058f1af8388633f609cadb75a75dc9d
+        )
+
+    [addCss] => 
+.material-bar,.navbar.navbar-inverse{
+	background:#253478;
+	background: #ff3019;
+	background: -moz-linear-gradient(top, #253478 0%, #273369 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#253478), color-stop(100%,#273369));
+	background: -webkit-linear-gradient(top, #253478 0%,#273369 100%);
+	background: -o-linear-gradient(top, #253478 0%,#273369 100%);
+	background: linear-gradient(to bottom, #253478 0%,#273369 100%);
+	color:#ffffff;
+}
+.material-bar .navbar-item{
+	color:#ffffff;
+}
+    [lang] => es
+    [runJS] => console.log("Callback");
+    [templates] => SimpleXMLElement Object
+        (
+            [header] => <table border="0" cellpadding="0" cellspacing="0" class='table'>
+	<tr>
+		<td>
+		<a onclick='goBack();' class="navbar-item">
+			<span class="glyphicon glyphicon-triangle-left"></span>
+		</a>
+		</td>
+		<td style='width:100%'>
+		<a onclick='goBack();' class="navbar-item">
+			<% if(this.logo!=undefined){ %>
+				<img src='<% this.logo %>' class='appLogo'>
+			<% }else{ %>
+				<% this.title %>
+			<% } %>
+		</a>
+		</td>
+		<% if(this.logged===true){ %>
+			<td>
+				<a class="navbar-item" onclick='a4pp_update();'><span id='updateIcon' class="glyphicon glyphicon-refresh"></span></a>
+			</td>
+		<% } %>
+		<% if(this.menu.length > 0){ %>
+		<td>
+			<a class="navbar-item" onclick='toggleMenu();'><span class="glyphicon glyphicon-option-vertical"></span></a>
+		</td>
+		<% } %>
+	</tr>
+</table>
+
+            [listview] => <div class="container">
+	<div class='superior'>
+		<% this.details %>
+	</div>
+	<ul class="model-list list <% if(this.extra!=undefined){ %> <% this.extra %> <% } %>">
+		<% for(var i=0;i<this.items.length;i++){ %>
+			<% if(this.items[i].model=='heading'){ %>
+			<h4><% this.items[i].title %></h4>
+			<% }else{ %>
+			<li class='model-list-item' onclick='triggerGoTo("<% this.items[i].xpath %>");'>
+				<% if(this.items[i].icon!=undefined){ %>
+				<img src='<% this.items[i].icon %>' style='width:48px;'>
+				<% } %> 
+				<% if(this.items[i].glyphicon!="none"){ %>
+				<div class='glyph' style='background-color:<% this.items[i].color %>'><span class='glyphicon glyphicon-<% this.items[i].glyphicon %>' style='width:48px;'></span></div>
+				<% } %> 
+				<% this.items[i].title %>
+			</li>
+			<% } %>
+		<% } %>
+	</ul> 
+</div> 
+        )
+
+    [title] => Importadora Parana S.A.
+    [model] => list
+    [items] => SimpleXMLElement Object
+        (
+        )
+
+    [details] => SimpleXMLElement Object
+        (
+        )
+
+    [icon] => SimpleXMLElement Object
+        (
+        )
+
+    [callback] => SimpleXMLElement Object
+        (
+        )
+
+    [glyphicon] => none
+    [color] => silver
+    [menu] => SimpleXMLElement Object
+        (
+        )
+
+    [menubar] => SimpleXMLElement Object
+        (
+        )
+
+    [async] => SimpleXMLElement Object
+        (
+        )
+
+    [xpath] => SimpleXMLElement Object
+        (
+        )
+
+    [logged] => SimpleXMLElement Object
+        (
+        )
+
+    [update_url] => http://iparana.fijatebien.net/app.php
+    [name] => Importadora Parana
+    [appHeader2] => #273369
+)
