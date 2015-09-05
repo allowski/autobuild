@@ -144,7 +144,10 @@ SimpleXMLElement Object
                         (
                         )
 
-                    [icon] => img/.jpg
+                    [icon] => SimpleXMLElement Object
+                        (
+                        )
+
                     [callback] => window.open("http://backup.automa.xyz/iparana/", "_blank", "location=no");
                     [glyphicon] => none
                     [color] => silver
@@ -215,7 +218,10 @@ SimpleXMLElement Object
                         (
                         )
 
-                    [icon] => img/.jpg
+                    [icon] => SimpleXMLElement Object
+                        (
+                        )
+
                     [callback] => SimpleXMLElement Object
                         (
                         )
