@@ -61,11 +61,35 @@
 			&lt;% } %&gt;&#xD;
 		&lt;% } %&gt;&#xD;
 	&lt;/ul&gt; &#xD;
-&lt;/div&gt; </listview></templates><title>Importadora Parana S.A.</title><model>list</model><items><item0><id>2</id><title>Acessar sistema</title><model>template</model><items></items><details></details><icon></icon><callback>window.open("http://backup.automa.xyz/iparana/", "_blank", "location=no");</callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath>/0</xpath><template>listview</template></item0><item1><id>3</id><title>Abrir leitor</title><model>template</model><items><item0><id>4</id><title>Volver</title><model>template</model><items></items><details></details><icon></icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath>/1/0</xpath></item0></items><details></details><icon></icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath>/1</xpath><template>listview</template><beforeRender>cordova.plugins.barcodeScanner.scan(
+&lt;/div&gt; </listview><iconview>&lt;div class="container"&gt;&#xD;
+	&lt;div class='superior'&gt;&#xD;
+		&lt;% this.details %&gt;&#xD;
+	&lt;/div&gt;&#xD;
+	&lt;div class="row model-icons icons &lt;% if(this.extra!=undefined){ %&gt; &lt;% this.extra %&gt; &lt;% } %&gt;"&gt;&#xD;
+		&lt;% for(var i=0;i&lt;this.items.length;i++){ %&gt;&#xD;
+			&lt;% if(this.items[i].model=='heading'){ %&gt;&#xD;
+			&lt;div class='col-xs-12'&gt;&#xD;
+			&lt;h4 class='visible-xs'&gt;&lt;% this.items[i].title %&gt;&lt;/h4&gt;&#xD;
+			&lt;h2 class='hidden-xs text-center'&gt;&lt;% this.items[i].title %&gt;&lt;/h2&gt;&#xD;
+			&lt;/div&gt;&#xD;
+			&lt;% }else{ %&gt;&#xD;
+			&lt;div class="col-md-3 col-sm-4 col-xs-6"&gt;&#xD;
+			&lt;div class='model-icons-item' onclick='triggerGoTo("&lt;% this.items[i].xpath %&gt;");'&gt;&#xD;
+				&lt;% if(this.items[i].icon!=undefined){ %&gt;&#xD;
+				&lt;img src='&lt;% this.items[i].icon %&gt;'&gt;&#xD;
+				&lt;% } %&gt; &#xD;
+				&lt;% this.items[i].title %&gt;&#xD;
+			&lt;/div&gt;&#xD;
+			&lt;/div&gt;&#xD;
+			&lt;% } %&gt;&#xD;
+		&lt;% } %&gt;&#xD;
+	&lt;/div&gt; &#xD;
+&lt;/div&gt; &#xD;
+</iconview></templates><title>Importadora Parana S.A.</title><model>template</model><items><item0><id>2</id><title>Acessar sistema</title><model>template</model><items></items><details></details><icon>img/.jpg</icon><callback>window.open("http://backup.automa.xyz/iparana/", "_blank", "location=no");</callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath>/0</xpath><template>listview</template></item0><item1><id>3</id><title>Abrir leitor</title><model>template</model><items><item0><id>4</id><title>Volver</title><model>template</model><items></items><details></details><icon></icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath>/1/0</xpath></item0></items><details></details><icon>img/.jpg</icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath>/1</xpath><template>listview</template><beforeRender>cordova.plugins.barcodeScanner.scan(
 	function (result) { 
 		window.open(result.text, "_blank", "location=no"); 
 		history.back();
 	},
 	function (error) { 
 		alert("Scanning failed: " + error); 
-	});</beforeRender></item1></items><details></details><icon></icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu><item0><title>Iniciar sesion</title><onclick>a4pp_login_form();</onclick></item0><item1><title>Restrarse</title><onclick>a4pp_register_form();</onclick></item1></menu><menubar/><async></async><xpath></xpath><logged></logged><update_url>http://iparana.fijatebien.net/app.php</update_url><name>Importadora Parana</name><appHeader2>#273369</appHeader2></app>
+	});</beforeRender></item1></items><details></details><icon></icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu><item0><title>Iniciar sesion</title><onclick>a4pp_login_form();</onclick></item0><item1><title>Restrarse</title><onclick>a4pp_register_form();</onclick></item1></menu><menubar/><async></async><xpath></xpath><logged></logged><update_url>http://iparana.fijatebien.net/app.php</update_url><name>Importadora Parana</name><appHeader2>#273369</appHeader2><template>iconview</template></app>
