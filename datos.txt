@@ -123,10 +123,7 @@ SimpleXMLElement Object
                         (
                         )
 
-                    [callback] => SimpleXMLElement Object
-                        (
-                        )
-
+                    [callback] => window.open("http://backup.automa.xyz/iparana/", "_system");
                     [glyphicon] => none
                     [color] => silver
                     [menu] => SimpleXMLElement Object
@@ -142,6 +139,7 @@ SimpleXMLElement Object
                         )
 
                     [xpath] => /0
+                    [template] => listview
                 )
 
             [item1] => SimpleXMLElement Object
@@ -161,10 +159,7 @@ SimpleXMLElement Object
                         (
                         )
 
-                    [callback] => SimpleXMLElement Object
-                        (
-                        )
-
+                    [callback] => cordova.plugins.barcodeScanner.scan( function (result) { alert(JSON.stringfy(result)); }, function (error) { alert("Scanning failed: " + error); } );
                     [glyphicon] => none
                     [color] => silver
                     [menu] => SimpleXMLElement Object
@@ -180,6 +175,7 @@ SimpleXMLElement Object
                         )
 
                     [xpath] => /1
+                    [template] => listview
                 )
 
         )
