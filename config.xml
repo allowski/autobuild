@@ -2,9 +2,9 @@
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		id        = "com.charlas.diagro"
-		version   = "991.2.9.6">
+		version   = "991.2.9.7">
 		<name>Charlas</name>
-		<description>Charlas 1.0, Build number 991.2.9.6</description>
+		<description>Charlas 1.0, Build number 991.2.9.7</description>
 		<author href="http://www.fijatebien.net" email="allowski@gmail.com">Alberto Miranda</author>
 		<preference name="phonegap-version" value="3.7.0" />
 		<access origin="*"/>
