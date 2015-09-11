@@ -171,6 +171,7 @@ SimpleXMLElement Object
                         )
 
                     [xpath] => /0
+                    [template] => contas
                 )
 
         )
