@@ -128,6 +128,7 @@ SimpleXMLElement Object
 	</div> 
 </div> 
 
+            [contas] => <input type='text' name='evento' class='form-control'>
         )
 
     [title] => All Eventos
