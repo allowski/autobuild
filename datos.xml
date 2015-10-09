@@ -608,7 +608,7 @@
 				&lt;p class="table-row"&gt;&lt;b class="table-cell"&gt;Presentacion:&lt;/b&gt; &lt;span class="table-cell"&gt;50mL y 500mL&lt;/span&gt;&lt;/p&gt;
 				&lt;p class="table-row"&gt;&lt;b class="table-cell"&gt;Composicion:&lt;/b&gt; &lt;span class="table-cell"&gt;Cada 100ml contiene: Ivermectina (1g), cloruro de zinc (0,02g) cloruro de magnesio hexahidratado (0,65g), dihidrato de cloruro de cobre (0,004g), hipofosfato de calcio (1,732g), yoduro de potasio (0,03g) vitaminas B12 (10.000mcg), hidroclocuro de histidina (0,42g) Valina (0,42g) clorhidrato de arginina (0,51g) metionina (0,42g) treonina (0,5g) el glutamato de sodio, monob&#xE1;sico (0,84g) y el veh&#xED;culo c.s.p (100ml)&lt;/span&gt;&lt;/p&gt;
 				&lt;p class="table-row"&gt;&lt;b class="table-cell"&gt;Indicaciones:&lt;/b&gt; &lt;span class="table-cell"&gt;Esta indicado como un activador del metabolismo org&#xE1;nico, complemento de vitaminas, amino&#xE1;cidos y minerales en las deficiencias nutricionales, reconstituyente y revigorizador org&#xE1;nico, durante y despu&#xE9;s del estr&#xE9;s y en el tratamiento y control de los endo-ectoparasitos de los bovinos, ovinos y caprinos.&lt;/span&gt;&lt;/p&gt;
-				&lt;p class="table-row"&gt;&lt;b class="table-cell"&gt;Modo de uso:&lt;/b&gt; &lt;span class="table-cell"&gt;Bovinos, ovinos y caprinos - 1ml/50 kg de peso vivo Administrar por v&#xED;a subcut&#xE1;nea.subcut&#xE1;nea.&lt;/span&gt;&lt;/p&gt;
+				&lt;p class="table-row"&gt;&lt;b class="table-cell"&gt;Modo de uso:&lt;/b&gt; &lt;span class="table-cell"&gt;Bovinos, ovinos y caprinos - 1ml/50 kg de peso vivo Administrar por v&#xED;a subcut&#xE1;nea.&lt;/span&gt;&lt;/p&gt;
 				&lt;div class='desk' style='margin-top:20px;'&gt;
 			&lt;p class='table-row'&gt;&lt;b class='table-cell'&gt;PERIODO DE RESTRICCION&lt;/b&gt;&lt;span class='table-cell'&gt;Bovinos:&#xA0;&#xD;
 &#xD;
@@ -681,7 +681,9 @@ Porcinos: 1ml para cada 33 kg de peso. V&#xED;a Intramuscular&lt;/span&gt;&lt;/p
 			.no-max{max-width:none !important;}
 			&lt;/style&gt;
 		&lt;h3 class="text-center"&gt;Solutick&lt;/h3&gt;
-		&lt;h5 class="text-center"&gt;&lt;i class="text-muted" style="color:#666;"&gt;El control de la infestaci&#xF3;n por garrapatas de acci&#xF3;n sist&#xE9;mica. Formulaci&#xF3;n lista para utilizaci&#xF3;n.&lt;/i&gt;</details><icon>img/11178.jpg</icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath>/1/3</xpath></item3><item4><id>44</id><title>RANGER</title><model>details</model><items></items><details>&lt;div class='container'&gt;&lt;div class='row'&gt;&lt;div class='col-lg-5'&gt;&lt;div class='text-center' style='background:#fff;height:300px;line-height:0px;'&gt;
+		&lt;h5 class="text-center"&gt;&lt;i class="text-muted" style="color:#666;"&gt;El control de la infestaci&#xF3;n por garrapatas de acci&#xF3;n sist&#xE9;mica. Formulaci&#xF3;n lista para utilizaci&#xF3;n.&lt;/i&gt;&lt;/h5&gt;
+		
+	</details><icon>img/11178.jpg</icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath>/1/3</xpath></item3><item4><id>44</id><title>RANGER</title><model>details</model><items></items><details>&lt;div class='container'&gt;&lt;div class='row'&gt;&lt;div class='col-lg-5'&gt;&lt;div class='text-center' style='background:#fff;height:300px;line-height:0px;'&gt;
 		&lt;img style='max-height:100%;max-width:100%;' src='img/big1404.jpg'&gt;
 		&lt;/div&gt;&lt;/div&gt;		&lt;div class="col-lg-6 pros"&gt;
 			&lt;style&gt;.pros b{width:120px;text-align:right;display:inline-block;padding-right:5px;vertical-align:middle;line-height:12px;text-transform:uppercase;}
@@ -769,7 +771,39 @@ Leche - Este producto no debe aplicarse a las hembras productoras de leche para 
 											&lt;/div&gt;
 
 &lt;/div&gt;
-		</details><icon>img/1403.jpg</icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath>/1/5</xpath></item5><item6><id>46</id><title>RANGER LA 3,5%</title><model>details</model><items></items><details>&lt;div class='container'&gt;&lt;div class='row'&gt;&lt;div class='col-lg-5'&gt;&lt;div class='text</details><icon>img/1402.jpg</icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath>/1/6</xpath></item6><item7><id>47</id><title>LANCER LA</title><model>details</model><items></items><details>&lt;div class='container'&gt;&lt;div class='row'&gt;&lt;div class='col-lg-5'&gt;&lt;div class='text-center' style='background:#fff;height:300px;line-height:0px;'&gt;
+		</details><icon>img/1403.jpg</icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath>/1/5</xpath></item5><item6><id>46</id><title>RANGER LA 3.5%</title><model>details</model><items></items><details>&lt;div class='container'&gt;&lt;div class='row'&gt;&lt;div class='col-lg-5'&gt;&lt;div class='text-center' style='background:#fff;height:300px;line-height:0px;'&gt;
+		&lt;img style='max-height:100%;max-width:100%;' src='img/big1402.jpg'&gt;
+		&lt;/div&gt;&lt;/div&gt;		&lt;div class="col-lg-6 pros"&gt;
+			&lt;style&gt;.pros b{width:120px;text-align:right;display:inline-block;padding-right:5px;vertical-align:middle;line-height:12px;text-transform:uppercase;}
+			.table-row{display:table-row;}
+			.table-cell{display:table-cell;padding:5px 0px;}
+			.no-max{max-width:none !important;}
+			&lt;/style&gt;
+		&lt;h3 class="text-center"&gt;RANGER LA 3.5%&lt;/h3&gt;
+		&lt;h5 class="text-center"&gt;&lt;i class="text-muted" style="color:#666;"&gt;Mayor eficiencia debido a la concentraci&#xF3;n ideal de 3,5% de Ivermectina. Apropiado para todas las categor&#xED;as de animales. Mayor tiempo de acci&#xF3;n, debido al veh&#xED;culo exclusivo.&lt;/i&gt;&lt;/h5&gt;
+		
+				&lt;p class="table-row"&gt;&lt;b class="table-cell"&gt;Tipo:&lt;/b&gt; &lt;span class="table-cell"&gt;ANTIPARASITARIOS&lt;/span&gt;&lt;/p&gt;
+				&lt;p class="table-row"&gt;&lt;b class="table-cell"&gt;Presentacion:&lt;/b&gt; &lt;span class="table-cell"&gt;50 y 500mL&lt;/span&gt;&lt;/p&gt;
+				&lt;p class="table-row"&gt;&lt;b class="table-cell"&gt;Composicion:&lt;/b&gt; &lt;span class="table-cell"&gt;Cada 100ml contiene Ivermectina (3,5g) y veh&#xED;culo tixotr&#xF3;pico c.s.p. (100mL)&lt;/span&gt;&lt;/p&gt;
+				&lt;p class="table-row"&gt;&lt;b class="table-cell"&gt;Indicaciones:&lt;/b&gt; &lt;span class="table-cell"&gt;Es una formulaci&#xF3;n inyectable y lista para su uso. Indicado para el tratamiento y control de par&#xE1;sitos gastrointestinales y pulmonares, garrapatas, larvas, piojos y &#xE1;caros de la sarna en bovinos. Preventivo de miasis (bicheras) y heridas de castraci&#xF3;n.&lt;/span&gt;&lt;/p&gt;
+				&lt;p class="table-row"&gt;&lt;b class="table-cell"&gt;Modo de uso:&lt;/b&gt; &lt;span class="table-cell"&gt;Bovino- 1ml/50kg de peso vivo. Administrar por v&#xED;a subcut&#xE1;nea.&lt;/span&gt;&lt;/p&gt;
+				&lt;div class='desk' style='margin-top:20px;'&gt;
+			&lt;p class='table-row'&gt;&lt;b class='table-cell'&gt;PERIODO DE RESTRICCION&lt;/b&gt;&lt;span class='table-cell'&gt;Carne -&#xA0;122 d&#xED;as despu&#xE9;s de la ultima aplicaci&#xF3;n.&#xD;
+Leche - Este producto no debe aplicarse a las hembras productoras de leche para consumo humano&#xD;
+&lt;/span&gt;&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div&gt;
+					&lt;/div&gt;
+				
+				&lt;b id='espin'&gt;Especies indicadas&lt;/b&gt;
+				&lt;img src="img/bovinos-de-corte.jpg" style='width:48px;margin:0px 2px;vertical-align:middle;' alt="BOVINOS DE CORTE"&gt;
+		
+				&lt;img src="img/bovinos-de-leche.jpg" style='width:48px;margin:0px 2px;vertical-align:middle;' alt="BOVINOS DE LECHE"&gt;
+		
+											&lt;/div&gt;
+
+&lt;/div&gt;
+		</details><icon>img/1402.jpg</icon><callback></callback><glyphicon>none</glyphicon><color>silver</color><menu/><menubar/><async></async><xpath>/1/6</xpath></item6><item7><id>47</id><title>LANCER LA</title><model>details</model><items></items><details>&lt;div class='container'&gt;&lt;div class='row'&gt;&lt;div class='col-lg-5'&gt;&lt;div class='text-center' style='background:#fff;height:300px;line-height:0px;'&gt;
 		&lt;img style='max-height:100%;max-width:100%;' src='img/big1405.jpg'&gt;
 		&lt;/div&gt;&lt;/div&gt;		&lt;div class="col-lg-6 pros"&gt;
 			&lt;style&gt;.pros b{width:120px;text-align:right;display:inline-block;padding-right:5px;vertical-align:middle;line-height:12px;text-transform:uppercase;}
@@ -1567,7 +1601,7 @@ Huevos: sin restricci&#xF3;n&#xD;
 			.no-max{max-width:none !important;}
 			&lt;/style&gt;
 		&lt;h3 class="text-center"&gt;VITAMAX&lt;/h3&gt;
-		&lt;h5 class="text-center"&gt;&lt;i class="text-muted" style="color:#666;"&gt;Compuesto de vitaminas del Complejo B (con acci&#xF3;n sobre el de los hidratos de carbono, prote&#xED;nas y grasas) y considerado un agente de acci&#xF3;n hipertensiva que proporciona una acci&#xF3;n r&#xE1;pida de recuperaci&#xF3;n de los animales.&lt;/i&gt;&lt;/h5&gt;
+		&lt;h5 class="text-center"&gt;&lt;i class="text-muted" style="color:#666;"&gt;Compuesto de vitaminas del Complejo B (con acci&#xF3;n sobre el de los hidratos de carbono, prote&#xED;nas y grasas) y considerado un agente de acci&#xF3;n hipertensiva que proporciona una acci&#xF3;n r&#xE1;pida de recuperaci&#xF3;n de los animales con acci&#xF3;n en el metabolismo de los hidratos de carbono.&lt;/i&gt;&lt;/h5&gt;
 		
 				&lt;p class="table-row"&gt;&lt;b class="table-cell"&gt;Tipo:&lt;/b&gt; &lt;span class="table-cell"&gt;SUPLEMENTOS&lt;/span&gt;&lt;/p&gt;
 				&lt;p class="table-row"&gt;&lt;b class="table-cell"&gt;Presentacion:&lt;/b&gt; &lt;span class="table-cell"&gt;10ml y 50ml&lt;/span&gt;&lt;/p&gt;
