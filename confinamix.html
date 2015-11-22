@@ -1,0 +1,894 @@
+<!doctype html>
+<html>
+	<head>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+		<title>Confinamix</title>
+		<link rel="stylesheet" type="text/css" href="css/4pp.css">
+	</head>
+	<body>
+		<div style="max-width:1170px;margin:0 auto;">
+		<div id="viewport">
+			<div class="navbar navbar-inverse navbar-fixed-top">
+				<a id="backButton" class="navbar-brand">
+					<span class="pull-left"><span onclick="history.back();" class="glyphicon glyphicon-chevron-left"></span></span>
+					<span id="appTitle">Confinamix</span>
+				</a>
+				<a class="navbar-brand pull-right" id="goSearch"><span class="glyphicon glyphicon-search"></span></a>
+				<a class="navbar-brand pull-right" id="goHome" href="index.html"><span class="glyphicon glyphicon-home"></span></a>
+			</div>
+			<div class="content">
+		<form id="viewport">
+			<table class="table table-striped table-bordered table-condensed">
+				<tr>
+					<th colspan="3" class="text-center theader">Datos Generales</th>
+				</tr>
+				<tr>
+					<td>Peso Vivo Inicial</td>
+					<td style="width:100px;"><input type="text" class="form-control text-right" id="C3" value="350"></td>
+					<td style="width:100px;">kg</td>
+				</tr>
+				<tr>
+					<td>Peso Vivo Final</td>
+					<td><input type="text" class="form-control text-right" id="C4" value="450"></td>
+					<td>kg</td>
+				</tr>
+				<tr>
+					<td>Cant. de animales confinados</td>
+					<td><input type="text" class="form-control text-right" id="C5" value="500"></td>
+					<td>cabezas</td>
+				</tr>
+				<tr>
+					<td>Precio del novillo al Gancho (Frigorifico)</td>
+					<td><input type="text" class="form-control text-right" id="C6" value="3,17"></td>
+					<td>USD/kg vivo</td>
+				</tr>
+				<tr>
+					<td>Rendimiento al Gancho esperado</td>
+					<td><input type="text" class="form-control text-right" id="C7" value="55"></td>
+					<td>(%)</td>
+				</tr>
+				<tr>
+					<td>Precio por Kg del animal de compra</td>
+					<td><input type="text" class="form-control text-right" id="C8" value="7400"></td>
+					<td>G$ / Kg vivo</td>
+				</tr>
+				<tr>
+					<td>Costo inicial del Animal al ser confinado</td>
+					<td><input type="text" class="form-control text-right" id="C9" value="148000"></td>
+					<td>G$ / animal</td>
+				</tr>
+				<tr>
+					<td>Costo inicial del Animal al ser confinado</td>
+					<td><input type="text" class="form-control text-right" id="C10" value="324"></td>
+					<td>U$ / animal</td>
+				</tr>
+				<tr>
+					<th colspan="3" class="text-center theader">Cotizaciones</th>
+				</tr>
+				<tr>
+					<td>Cambio G$ x Dolares</td>
+					<td><input type="text" class="form-control text-right" id="C13" value="4900"></td>
+					<td>G$/USD</td>
+				</tr>
+				<tr>
+					<th colspan="3" class="text-center theader">Costo de los ingredientes</th>
+				</tr>
+				<tr>
+					<td>Ingrediente</td>
+					<td>G$</td>
+					<td>USD</td>
+				</tr>
+				<tr>
+					<td>Confinamix</td>
+					<td><input type="text" class="form-control text-right" id="C17" value=""></td>
+					<td><input type="text" class="form-control text-right" id="D17" value="840"></td>
+				</tr>
+				<tr>
+					<td>Competencia</td>
+					<td><input type="text" class="form-control text-right" id="C18" value=""></td>
+					<td><input type="text" class="form-control text-right" id="D18" value="750"></td>
+				</tr>
+				<tr>
+					<td>Maiz Grano entero (En G$)</td>
+					<td><input type="text" class="form-control text-right" id="C19" value="700000"></td>
+					<td><input type="text" class="form-control text-right" id="D19" value="750"></td>
+				</tr>
+				<tr>
+					<th class="text-center theader" colspan="3">Para el uso de Confinamix</th>
+				</tr>
+				<tr>
+					<td>Consumo Confinamix</td>
+					<td><input type="text" class="form-control text-right" id="C22" value="2,1"></th>
+					<td>% Peso corporal</td>
+				</tr>
+				<tr>
+					<td>Ganancia de peso esperada</td>
+					<td><input type="text" class="form-control text-right" id="C23" value="1,6"></th>
+					<td>Kg/dia/animal</td>
+				</tr>
+			</table>
+			<table class="table table-bordered table-striped table-condensed">
+				<tr>
+					<th class="text-center theader" colspan="3" style="background:#00B0F0;color:#fff;">Confinamix X Competencia</th>
+				</tr>
+				<tr>
+					<td>Peso Vivo Inicial</td>
+					<td style="width:100px;"><input type="text" class="form-control text-right" id="C28" value="350"></td>
+					<td style="width:100px;">kg</td>
+				</tr>
+				<tr>
+					<td>Peso Vivo Final</td>
+					<td><input type="text" class="form-control text-right" id="C29" value="450"></td>
+					<td>kg</td>
+				</tr>
+				<tr>
+					<td>Peso promedio</td>
+					<td><input type="text" class="form-control text-right" id="C30" value=""></td>
+					<td>kg</td>
+				</tr>
+				<tr>
+					<td>Consumo</td>
+					<td><input type="text" class="form-control text-right" id="C31" value="2,1"></td>
+					<td>% Peso Corporal</td>
+				</tr>
+				<tr>
+					<td>Consumo Promedio Dieta</td>
+					<td><input type="text" class="form-control text-right" id="C32" value="2,1"></td>
+					<td>% Peso Corporal</td>
+				</tr>
+				<tr>
+					<th class="text-center theader" colspan="3">Composici&oacute;n de la dieta</th>
+				</tr>
+				<tr>
+					<td>Confinamix</td>
+					<td><input type="text" class="form-control text-right" id="C34" value="15"></td>
+					<td>%</td>
+				</tr>
+				<tr>
+					<td>Maiz Grano entero</td>
+					<td><input type="text" class="form-control text-right" id="C35" value="85"></td>
+					<td>%</td>
+				</tr>
+				<tr>
+					<th class="text-center theader" colspan="3">Resultados financieros</th>
+				</tr>
+				<tr>
+					<td>Confinamix</td>
+					<td><input type="text" class="form-control text-right" id="C37" value=""></td>
+					<td>USD/Tonelada</td>
+				</tr>
+				<tr>
+					<td style="background:#ccc">Costo medio del Confinamix por dia</td>
+					<td style="background:#ccc"><input type="text" class="form-control text-right" id="C38" value=""></td>
+					<td style="background:#ccc">USD/animal/dia</td>
+				</tr>
+				<tr>
+					<td>Precio Competencia</td>
+					<td><input type="text" class="form-control text-right" id="C39" value=""></td>
+					<td>USD/Tonelada</td>
+				</tr>
+				<tr>
+					<td style="background:#ccc">Costo medio de la competencia por dia</td>
+					<td style="background:#ccc"><input type="text" class="form-control text-right" id="C40" value=""></td>
+					<td style="background:#ccc">USD/animal/dia</td>
+				</tr>
+				<tr>
+					<td style="background:#E6B8B7;">Diferencia</td>
+					<td style="background:#E6B8B7"><input type="text" class="form-control text-right" id="C41" value=""></td>
+					<td style="background:#E6B8B7">USD/animal/dia</td>
+				</tr>
+				<tr>
+					<td>Precio del novillo al Gancho (Frigorifico)</td>
+					<td><input type="text" class="form-control text-right" id="C42" value=""></td>
+					<td>USD/Kg vivo</td>
+				</tr>
+				<tr>
+					<td>Rendimiento al Gancho esperado</td>
+					<td><input type="text" class="form-control text-right" id="C43" value=""></td>
+					<td>%</td>
+				</tr>
+				<tr>
+					<td style="background:#00B050">Ganacia Adicional para Cubir Gastos</td>
+					<td style="background:#00B050"><input type="text" class="form-control text-right" id="C44" value=""></td>
+					<td style="background:#00B050">%</td>
+				</tr>
+				<tr>
+					<td style="background:#92D050">Ganacia Adicional en gramos para Cubir Gastos</td>
+					<td style="background:#92D050"><input type="text" class="form-control text-right" id="C45" value=""></td>
+					<td style="background:#92D050">Kg</td>
+				</tr>
+			</table>
+			<table class="table table-bordered table-striped table-condensed">
+				<tr>
+					<th class="text-center theader" colspan="3">Costo de la Adaptacion</th>
+				</tr>
+				<tr>
+					<th colspan="3" style="background:red;color:white">1a Fase (Dia 1, 2 y 3) 0,5% de la Mezcla 20% Confinamix + 80% Maiz</th>
+				</tr>
+				<tr>
+					<th>INGREDIENTES</th>
+					<th>Cantidades KG</th>
+					<th>Monto USD</th>
+				</tr>
+				<tr>
+					<td>Consumo de maiz</td>
+					<td><input type="text" class="form-control text-right" id="C51" value=""></td>
+					<td><input type="text" class="form-control text-right" id="D51" value=""></td>
+				</tr>
+				<tr>
+					<td>Consumo de Confinamix</td>
+					<td><input type="text" class="form-control text-right" id="C52" value=""></td>
+					<td><input type="text" class="form-control text-right" id="D52" value=""></td>
+				</tr>
+				<tr>
+					<td class="text-right" colspan="2">COSTO TOTAL</td>
+					<td><input type="text" class="form-control text-right" id="D53" value=""></td>
+				</tr>
+
+
+
+
+				<tr>
+					<th colspan="3" style="background:red;color:white">2a Fase (Dia 4, 5 y 6) 1,0% de la Mezcla 20% Confinamix + 80% Maiz</th>
+				</tr>
+				<tr>
+					<th>INGREDIENTES</th>
+					<th>Cantidades KG</th>
+					<th>Monto USD</th>
+				</tr>
+				<tr>
+					<td>Consumo de maiz</td>
+					<td><input type="text" class="form-control text-right" id="C55" value=""></td>
+					<td><input type="text" class="form-control text-right" id="D55" value=""></td>
+				</tr>
+				<tr>
+					<td>Consumo de Confinamix</td>
+					<td><input type="text" class="form-control text-right" id="C56" value=""></td>
+					<td><input type="text" class="form-control text-right" id="D56" value=""></td>
+				</tr>
+				<tr>
+					<td class="text-right" colspan="2">COSTO TOTAL</td>
+					<td><input type="text" class="form-control text-right" id="D57" value=""></td>
+				</tr>
+
+
+
+
+				<tr>
+					<th colspan="3" style="background:red;color:white">2a Fase (Dia 7, 8 y 9) 1,5% de la Mezcla 20% Confinamix + 80% Maiz</th>
+				</tr>
+				<tr>
+					<th>INGREDIENTES</th>
+					<th>Cantidades KG</th>
+					<th>Monto USD</th>
+				</tr>
+				<tr>
+					<td>Consumo de maiz</td>
+					<td><input type="text" class="form-control text-right" id="C59" value=""></td>
+					<td><input type="text" class="form-control text-right" id="D59" value=""></td>
+				</tr>
+				<tr>
+					<td>Consumo de Confinamix</td>
+					<td><input type="text" class="form-control text-right" id="C60" value=""></td>
+					<td><input type="text" class="form-control text-right" id="D60" value=""></td>
+				</tr>
+				<tr>
+					<td class="text-right" colspan="2">COSTO TOTAL</td>
+					<td><input type="text" class="form-control text-right" id="D61" value=""></td>
+				</tr>
+
+
+
+
+
+				<tr>
+					<th colspan="3" style="background:red;color:white">2a Fase (Dia 10, 11 y 12) 2,0% de la Mezcla 20% Confinamix + 80% Maiz</th>
+				</tr>
+				<tr>
+					<th>INGREDIENTES</th>
+					<th>Cantidades KG</th>
+					<th>Monto USD</th>
+				</tr>
+				<tr>
+					<td>Consumo de maiz</td>
+					<td><input type="text" class="form-control text-right" id="C64" value=""></td>
+					<td><input type="text" class="form-control text-right" id="D64" value=""></td>
+				</tr>
+				<tr>
+					<td>Consumo de Confinamix</td>
+					<td><input type="text" class="form-control text-right" id="C65" value=""></td>
+					<td><input type="text" class="form-control text-right" id="D65" value=""></td>
+				</tr>
+				<tr>
+					<td class="text-right" colspan="2">COSTO TOTAL</td>
+					<td><input type="text" class="form-control text-right" id="D66" value=""></td>
+				</tr>
+
+
+
+				<tr>
+					<th colspan="3" style="background:red;color:white">COSTO TOTAL DEL PERIODO DE ADAPTACION</th>
+				</tr>
+				<tr>
+					<td style="background:#FFFF00;">Consumo/Costo de maiz</td>
+					<td style="background:#FFFF00;"><input type="text" class="form-control text-right" id="C68" value=""></td>
+					<td style="background:#FFFF00;"><input type="text" class="form-control text-right" id="D68" value=""></td>
+				</tr>
+				<tr>
+					<td style="background:#FFFF00;">Consumo/Costo de Confinamix</td>
+					<td style="background:#FFFF00;"><input type="text" class="form-control text-right" id="C69" value=""></td>
+					<td style="background:#FFFF00;"><input type="text" class="form-control text-right" id="D69" value=""></td>
+				</tr>
+				<tr>
+					<td style="background:#FFFF00;" class="text-center" colspan="2">COSTO TOTAL</td>
+					<td style="background:#FFFF00;"><input type="text" class="form-control text-right" id="D70" style="font-size:20px;" value=""></td>
+				</tr>
+				<tr style="border-bottom:20px solid black;">
+					<td style="background:#FFC000;" class="text-center" colspan="2">COSTO TOTAL POR ANIMAL EN 12 DIAS</td>
+					<td style="background:#FFC000;"><input type="text" class="form-control text-right" id="D71" style="font-size:20px;" value=""></td>
+				</tr>
+				<tr>
+					<td style="background:#FFFF00;" class="text-center" colspan="2">GANANCIA MINIMA ESPERADA PARA COBRIR COSTO (en kg)</td>
+					<td style="background:#FFFF00;"><input type="text" class="form-control text-right" id="D72" value=""></td>
+				</tr>
+					<tr>
+					<td style="background:#FFFF00;" class="text-center" colspan="2">GANANCIA MINIMA ESPERADA PARA COBRIR COSTO (en G/DIA)</td>
+					<td style="background:#FFFF00;"><input type="text" class="form-control text-right" id="D73" value=""></td>
+				</tr>
+
+			</table>
+
+			<!-- separar \ \\\\ -->
+
+
+
+			<table class="table table-bordered table-striped table-condensed">
+				<tr>
+					<th colspan="3" style="background:#FCD5B4;text-align:center;text-transform:uppercase;">Necesidades dieta Confinamix</th>
+				</tr>
+				<tr>
+					<td>Peso Vivo inicial</td>
+					<td><input type="text" class="form-control text-right" id="D80" value=""></td>
+					<td>Kg</td>
+				</tr>
+				<tr>
+					<td colspan="1">Peso Vivo Final</td>
+					<td><input type="text" class="form-control text-right" id="D81" value=""></td>
+					<td>Kg</td>
+				</tr>
+				<tr>
+					<td>Peso promedio</td>
+					<td><input type="text" class="form-control text-right" id="D82" value=""></td>
+					<td>Kg</td>
+				</tr>
+				<tr>
+					<td>Consumo</td>
+					<td><input type="text" class="form-control text-right" id="D83" value=""></td>
+					<td>% peso corporal</td>
+				</tr>
+				<tr>
+					<td>Consumo diario promedio de la dieta</td>
+					<td><input type="text" class="form-control text-right" id="D84" value=""></td>
+					<td>Kg/animal/dia</td>
+				</tr>
+
+				<tr>
+					<td>Ganancia diaria de Peso esperada</td>
+					<td><input type="text" class="form-control text-right" id="D85" value=""></td>
+					<td>Kg/animal/dia</td>
+				</tr>	
+
+				<tr>
+					<td>Cantidad de Dias necesarios para atingir Peso Final</td>
+					<td><input type="text" class="form-control text-right" id="D86" value=""></td>
+					<td>Kg/animal/dia</td>
+				</tr>
+				<tr>
+					<th colspan="3" class="text-center" style="background:#ff9;color:#9C6500;">Cantidad Necesaria Promedia de Ingredientes x animal x dia</th>
+				</tr>
+				<tr>
+					<th>Ingredientes (Promedio x dia)</th>
+					<th>Cantidad %</th>
+					<th>Cantidad Kg</th>
+				</tr>
+
+				<tr>
+					<td>Confinamix</td>
+					<td><input type="text" class="form-control text-right" id="C89" value=""></td>
+					<td><input type="text" class="form-control text-right" id="D89" value=""></td>
+				</tr>
+
+				<tr>
+					<td>Maiz Grano Entero</td>
+					<td><input type="text" class="form-control text-right" id="C90" value=""></td>
+					<td><input type="text" class="form-control text-right" id="D90" value=""></td>
+				</tr>
+
+
+
+
+
+
+				<tr>
+					<th colspan="3" class="text-center" style="background:#ff9;color:#9C6500;">Cantidad Necesaria de Ingredientes x Animal x Todo el Periodo de Confinamiento</th>
+				</tr>
+
+				<tr>
+					<td>Confinamix</td>
+					<td></td>
+					<td><input type="text" class="form-control text-right" id="D92" value=""></td>
+				</tr>
+
+				<tr>
+					<td>Maiz Grano Entero</td>
+					<td></td>
+					<td><input type="text" class="form-control text-right" id="D93" value=""></td>
+				</tr>
+
+
+				<tr>
+					<th colspan="3" class="text-center" style="background:#ff9;color:#9C6500;">Cantidad Total de Ingredientes Necesaria</th>
+				</tr>
+
+				<tr>
+					<td colspan="2">Numero Total de Animales Confinados</td>
+					<td><input type="text" class="form-control text-right" id="D95" value=""></td>
+				</tr>
+
+				<tr>
+					<td colspan="2">Ingredientes</td>
+					<td colspan="1">Cantidad Kg.</td>
+				</tr>
+
+				<tr>
+					<td colspan="2">Confinamix</td>
+					<td><input type="text" class="form-control text-right" id="D97" value=""></td>
+				</tr>
+
+				<tr>
+					<td colspan="2">Maiz Grano Entero</td>
+					<td><input type="text" class="form-control text-right" id="D98" value=""></td>
+				</tr>
+
+
+
+
+				<tr>
+					<th colspan="3" class="text-center" style="background:#ff9;color:#9C6500;">COSTO TOTAL DEL CONFINAMIENTO</th>
+				</tr>
+
+
+				<tr>
+					<td colspan="2">Ingredientes</td>
+					<td colspan="1">Cantidad Kg.</td>
+				</tr>
+
+				<tr>
+					<td colspan="2">Confinamix</td>
+					<td><input type="text" class="form-control text-right" id="D101" value=""></td>
+				</tr>
+
+				<tr>
+					<td colspan="2">Maiz Grano Entero</td>
+					<td><input type="text" class="form-control text-right" id="D102" value=""></td>
+				</tr>
+				<tr>
+					<td colspan="2">COSTO TOTAL DEL CONFINAMIENTO</td>
+					<td><input type="text" class="form-control text-right" id="D103" value=""></td>
+				</tr>
+
+
+			</table>
+			<table class="table table-bordered table-striped table-condensed">
+				<tr>
+					<th colspan="3" class="text-center" style="background:#C4D79B;">Ganancia Estimada x Animal</th>
+				</tr>
+				<tr>
+					<td colspan="2">Costo Total - Confinamix</td>
+					<td><input type="text" class="form-control text-right" id="D108" value=""></td>
+				</tr>
+				<tr>
+					<td colspan="2">Costo Total - Maiz Grano Entero</td>
+					<td><input type="text" class="form-control text-right" id="D109" value=""></td>
+				</tr>
+				<tr>
+					<td colspan="2">COSTO TOTAL DIETA X ANIMAL</td>
+					<td><input type="text" class="form-control text-right" id="D110" value=""></td>
+				</tr>
+
+
+
+
+
+
+				<tr>
+					<th colspan="3" class="text-center" style="background:#C4D79B;">Precio de Venta x animal</th>
+				</tr>
+				<tr>
+					<td>Costo Inicial del Animal a ser Confinado</td>
+					<td><input type="text" class="form-control text-right" id="D113" value=""></td>
+					<td>USD x animal</td>
+				</tr>
+				<tr>
+					<td>Peso Vivo Final del Animal</td>
+					<td><input type="text" class="form-control text-right" id="D114" value=""></td>
+					<td>Kg Vivo</td>
+				</tr>
+				<tr>
+					<td>Rendimiento al Gancho</td>
+					<td><input type="text" class="form-control text-right" id="D115" value=""></td>
+					<td>%</td>
+				</tr>
+				<tr>
+					<td>Peso Final al Gancho</td>
+					<td><input type="text" class="form-control text-right" id="D116" value=""></td>
+					<td>Kg Gancho</td>
+				</tr>
+				<tr>
+					<td>Precio del Animal en Frigorifico (Al Gancho)</td>
+					<td><input type="text" class="form-control text-right" id="D117" value=""></td>
+					<td>USD x Kg</td>
+				</tr>
+				<tr>
+					<td>Valor Final del Animal Terminado</td>
+					<td><input type="text" class="form-control text-right" id="D118" value=""></td>
+					<td>USD x animal</td>
+				</tr>
+
+
+
+
+
+
+
+				<tr>
+					<th colspan="3" class="text-center" style="background:#C4D79B;">Ganancia en el Periodo del Confinamiento			
+			</th>
+				</tr>
+				<tr>
+					<td>Ganancia Total en el Periodo</td>
+					<td><input type="text" class="form-control text-right" id="D121" value=""></td>
+					<td>USD x animal</td>
+				</tr>
+				<tr>
+					<td>Con el Rendimiento de</td>
+					<td><input type="text" class="form-control text-right" id="D122" value=""></td>
+					<td>%</td>
+				</tr>
+				<tr>
+					<td>Ganancia Total del periodo	</td>
+					<td><input type="text" class="form-control text-right" id="D123" value=""></td>
+					<td>USD x animal</td>
+				</tr>
+				<tr>
+					<td>Costo Total del Periodo Confinado</td>
+					<td><input type="text" class="form-control text-right" id="D124" value=""></td>
+					<td>Kg Gancho</td>
+				</tr>
+				<tr>
+					<td>Ganancia Final Por Animal Confinado en dolares</td>
+					<td><input type="text" class="form-control text-right" id="D125" value=""></td>
+					<td>USD x animal</td>
+				</tr>
+				<tr>
+					<td>Ganancia Final Por Animal Confinado en Guaranies</td>
+					<td><input type="text" class="form-control text-right" id="D126" value=""></td>
+					<td>G$ x animal</td>
+				</tr>
+
+
+
+				<tr>
+					<th colspan="3" class="text-center" style="background:#C4D79B;">Ganancia Estimada x Animal X Cambio de Categoria			
+			</th>
+				</tr>
+				<tr>
+					<td>Costo por Kg del Animal a la compra</td>
+					<td><input type="text" class="form-control text-right" id="D131" value=""></td>
+					<td>G$ x kg</td>
+				</tr>
+				<tr>
+					<td>Precio por Kg del Animal a la venta (55% rendimiento)</td>
+					<td><input type="text" class="form-control text-right" id="D132" value=""></td>
+					<td>G$ x kg</td>
+				</tr>
+				<tr>
+					<td>Diferencia en G$ por Kg comprado</td>
+					<td><input type="text" class="form-control text-right" id="D133" value=""></td>
+					<td>G$ x kg</td>
+				</tr>
+				<tr>
+					<td>Diferencia total por Cambio de Categoria</td>
+					<td><input type="text" class="form-control text-right" id="D134" value=""></td>
+					<td>G$ x animal</td>
+				</tr>
+
+				<tr>
+					<th colspan="3" class="text-center" style="background:#C4D79B;">Ganancia Final Por Animal del Confinamiento (incluyendo el Cambio de Categoria)
+				</th>
+				</tr>
+				<tr>
+					<td>Ganancia Total por Animal en el Periodo	</td>
+					<td><input type="text" class="form-control text-right" id="C137" value=""></td>
+					<td>G$ x animal</td>
+				</tr>
+
+
+			</table>
+		</form>
+		</div>
+		</div>
+		<!-- scripts -->
+		<script src="js/jquery.min.js"></script>
+<script>
+function get(id){
+	return parseFloat($("#"+id).val().replace(",", "."));
+}
+
+function number_format(number, decimals, dec_point, thousands_sep) {
+  //  discuss at: http://phpjs.org/functions/number_format/
+  // original by: Jonas Raoni Soares Silva (http://www.jsfromhell.com)
+  // improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+  // improved by: davook
+  // improved by: Brett Zamir (http://brett-zamir.me)
+  // improved by: Brett Zamir (http://brett-zamir.me)
+  // improved by: Theriault
+  // improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+  // bugfixed by: Michael White (http://getsprink.com)
+  // bugfixed by: Benjamin Lupton
+  // bugfixed by: Allan Jensen (http://www.winternet.no)
+  // bugfixed by: Howard Yeend
+  // bugfixed by: Diogo Resende
+  // bugfixed by: Rival
+  // bugfixed by: Brett Zamir (http://brett-zamir.me)
+  //  revised by: Jonas Raoni Soares Silva (http://www.jsfromhell.com)
+  //  revised by: Luke Smith (http://lucassmith.name)
+  //    input by: Kheang Hok Chin (http://www.distantia.ca/)
+  //    input by: Jay Klehr
+  //    input by: Amir Habibi (http://www.residence-mixte.com/)
+  //    input by: Amirouche
+  //   example 1: number_format(1234.56);
+  //   returns 1: '1,235'
+  //   example 2: number_format(1234.56, 2, ',', ' ');
+  //   returns 2: '1 234,56'
+  //   example 3: number_format(1234.5678, 2, '.', '');
+  //   returns 3: '1234.57'
+  //   example 4: number_format(67, 2, ',', '.');
+  //   returns 4: '67,00'
+  //   example 5: number_format(1000);
+  //   returns 5: '1,000'
+  //   example 6: number_format(67.311, 2);
+  //   returns 6: '67.31'
+  //   example 7: number_format(1000.55, 1);
+  //   returns 7: '1,000.6'
+  //   example 8: number_format(67000, 5, ',', '.');
+  //   returns 8: '67.000,00000'
+  //   example 9: number_format(0.9, 0);
+  //   returns 9: '1'
+  //  example 10: number_format('1.20', 2);
+  //  returns 10: '1.20'
+  //  example 11: number_format('1.20', 4);
+  //  returns 11: '1.2000'
+  //  example 12: number_format('1.2000', 3);
+  //  returns 12: '1.200'
+  //  example 13: number_format('1 000,50', 2, '.', ' ');
+  //  returns 13: '100 050.00'
+  //  example 14: number_format(1e-8, 8, '.', '');
+  //  returns 14: '0.00000001'
+
+  number = (number + '')
+    .replace(/[^0-9+\-Ee.]/g, '');
+  var n = !isFinite(+number) ? 0 : +number,
+    prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
+    sep = (typeof thousands_sep === 'undefined') ? ',' : thousands_sep,
+    dec = (typeof dec_point === 'undefined') ? '.' : dec_point,
+    s = '',
+    toFixedFix = function(n, prec) {
+      var k = Math.pow(10, prec);
+      return '' + (Math.round(n * k) / k)
+        .toFixed(prec);
+    };
+  // Fix for IE parseFloat(0.55).toFixed(0) = 0;
+  s = (prec ? toFixedFix(n, prec) : '' + Math.round(n))
+    .split('.');
+  if (s[0].length > 3) {
+    s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
+  }
+  if ((s[1] || '')
+    .length < prec) {
+    s[1] = s[1] || '';
+    s[1] += new Array(prec - s[1].length + 1)
+      .join('0');
+  }
+  return s.join(dec);
+}
+
+function recalc(){
+	$("#C9").val((get("C8")*get("C3")).toFixed(0));
+	$("#C10").val((get("C9")/get("C13")).toFixed(2));
+	$("#D19").val((get("C19")/get("C13")).toFixed(2));
+	$("#C28").val(get("C3").toFixed(2));
+	$("#C29").val(get("C4").toFixed(2));
+	$("#C30").val(((get("C3")+get("C4"))/2).toFixed(2));
+	$("#C31").val(get("C22").toFixed(2));
+	$("#C32").val(((get("C30")*get("C31"))/100).toFixed(2));
+	$("#C37").val(get("D17"));
+	$("#C38").val(((get("C32")*get("C34")/100)*(get("C37")/1000)).toFixed(2));
+
+	$("#C39").val(get("D18"));
+	$("#C40").val(((get("C32")*get("C34")/100)*(get("C39")/1000)).toFixed(2));
+
+	$("#C41").val((get("C38")-get("C40")).toFixed(2));
+	$("#C42").val((get("C6")).toFixed(2));
+	$("#C43").val((get("C7")).toFixed(2));
+	$("#C44").val((get("C41")/(get("C42")*(get("C43")/100))).toFixed(4));
+	$("#C45").val((get("C44")*1000).toFixed(1));
+
+	$("#C51").val((((((get("C3")*80)/100) * 0.5) / 100) * get("C5") * 3).toFixed(0))
+	$("#D51").val((get("C51")*(get("D19")/1000)).toFixed(2));
+
+	$("#C52").val((((((get("C3")*20)/100) * 0.5) / 100) * get("C5") * 3).toFixed(0))
+	$("#D52").val((get("C52")*(get("D17")/1000)).toFixed(2));
+	$("#D53").val((get("D52")+(get("D51"))).toFixed(2));
+
+
+//------------------------
+
+
+	$("#C55").val((((((get("C3")*80)/100) * 1) / 100) * get("C5") * 3).toFixed(0))
+	$("#D55").val((get("C55")*(get("D19")/1000)).toFixed(2));
+
+	$("#C56").val((((((get("C3")*20)/100) * 1) / 100) * get("C5") * 3).toFixed(0))
+	$("#D56").val((get("C56")*(get("D17")/1000)).toFixed(2));
+	$("#D57").val((get("D55")+(get("D56"))).toFixed(2));
+
+//------------------------
+
+
+	$("#C59").val((((((get("C3")*80)/100) * 1.5) / 100) * get("C5") * 3).toFixed(0))
+	$("#D59").val((get("C59")*(get("D19")/1000)).toFixed(2));
+
+	$("#C60").val((((((get("C3")*20)/100) * 1.5) / 100) * get("C5") * 3).toFixed(0))
+	$("#D60").val((get("C60")*(get("D17")/1000)).toFixed(2));
+	$("#D61").val((get("D59")+(get("D60"))).toFixed(2));
+
+//------------------------
+
+	$("#C64").val((((((get("C3")*80)/100) * 2) / 100) * get("C5") * 3).toFixed(0))
+	$("#D64").val((get("C64")*(get("D19")/1000)).toFixed(2));
+
+	$("#C65").val((((((get("C3")*20)/100) * 2) / 100) * get("C5") * 3).toFixed(0))
+	$("#D65").val((get("C65")*(get("D17")/1000)).toFixed(2));
+	$("#D66").val((get("D65")+(get("D64"))).toFixed(2));
+
+// -----------------------
+
+	//$("#D68").val((get("D51")+get("D56")+get("D61")+get("D66")).toFixed(2));
+
+	$("#C68").val((get("C51")+get("C55")+get("C59")+get("C64")).toFixed(0));
+	$("#D68").val((get("D51")+get("D55")+get("D59")+get("D64")).toFixed(2));
+
+	$("#C69").val((get("C52")+get("C56")+get("C60")+get("C65")).toFixed(0));
+	$("#D69").val((get("D52")+get("D56")+get("D60")+get("D65")).toFixed(2));
+
+	$("#D70").val(get("D69")+get("D68"));
+	$("#D71").val((get("D70")/get("C5")).toFixed(2));
+	$("#D72").val((get("D71")/(get("C6")*(get("C7")/100))).toFixed(2));
+	$("#D73").val(((get("D72")/12)*1000).toFixed(2));
+
+// --------------------------------------------------------------------------
+
+	$("#D80").val(get("C3"));
+	$("#D81").val(get("C4"));
+	$("#D82").val(((get("C3")+get("C4"))/2).toFixed(2));
+	$("#D83").val(get("C22"));
+	$("#D84").val(get("C32"));
+	$("#D85").val(get("C23"));
+	$("#D86").val(((get("D81")-get("D80"))/get("D85")).toFixed(0));
+
+//--------------------------------------------------------------------------
+
+	$("#C89").val((get("C34")));
+	$("#D89").val(((get("D84")*get("C89"))/100).toFixed(2));
+
+	$("#C90").val((get("C35")));
+	$("#D90").val(((get("D84")*get("C90"))/100).toFixed(2));
+
+//--------------------------------------------------------------------------
+
+	$("#D92").val(get("D86")*get("D89"));
+	$("#D93").val(get("D86")*get("D90"));
+//--------------------
+	$("#D95").val(get("C5"));
+
+	$("#D97").val(get("D95")*get("D92"));
+	$("#D98").val(get("D95")*get("D93"));
+//-------------------
+	$("#D101").val(((get("D97")/1000)*get("D17")).toFixed(2));
+	$("#D102").val(((get("D98")/1000)*get("D19")).toFixed(2));
+
+	$("#D103").val(get("D101") + get("D102"));
+// --------------------------------------------------
+
+
+	$("#D108").val((get("D101")/get("D95")).toFixed(2));
+	$("#D109").val((get("D102")/get("D95")).toFixed(2));
+
+	$("#D110").val(get("D108")+get("D109"));
+
+
+
+
+	$("#D113").val(get("C10"));
+	$("#D114").val(get("C4"));
+	$("#D115").val(get("C7"));
+	$("#D116").val(get("D115")*get("D114"));
+	$("#D117").val(get("C6"));
+	$("#D118").val(get("D116")*get("D117"));
+
+	//----------------------------------------------------
+
+	$("#D121").val(get("C4")-get("C3"));
+	$("#D122").val(get("C7"));
+	$("#D123").val(get("D121")*get("D122")*(get("C6")/100));
+	$("#D124").val(get("D110"));
+	$("#D125").val(get("D123")-get("D124"));
+	$("#D126").val((get("D125")*get("C13")).toFixed(0));
+
+	//-----------------------------------------------------
+
+
+
+	$("#D131").val(get("C8"));
+	$("#D132").val(((get("C6")/100)*get("C7")*get("C13")));
+	$("#D133").val((get("D132")-get("D131")).toFixed(0));
+	$("#D134").val(get("D133")*get("C3"));
+
+
+	$("#C137").val((get("D126")+get("D134")));
+
+}
+recalc();
+$(function(){
+	$('input:text[value=""]').prop("disabled", true);
+	$("input").on("keyup", function(){
+		recalc();
+	});
+});
+</script>
+<style>
+.content{
+	position: relative;
+
+}
+.table .theader{
+	text-align: center;
+}
+.form-control{
+	border-radius: 0px !important;
+	padding:2px 5px;
+	height:26px;
+	border:none !important;
+	background: none;
+}
+.form-control:disabled{
+	font-weight: bold;
+	background:none;
+}
+.table.table-bordered,
+.table.table-bordered tr,
+.table.table-bordered tr th,
+.table.table-bordered tr td{
+	border-color:black !important;
+	padding:0px !important;
+	line-height: 26px;
+}
+
+.table.table-bordered tr td{
+	padding:3px 7px !important;
+}
+</style>
+</div>
+	</body>
+</html>
