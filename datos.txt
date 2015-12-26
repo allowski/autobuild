@@ -1,0 +1,535 @@
+SimpleXMLElement Object
+(
+    [id] => 10
+    [path] => /var/www/app_10
+    [domain] => http://www.tulipas.de/app.php
+    [version] => SimpleXMLElement Object
+        (
+        )
+
+    [a4pp_dir] => /var/www
+    [disableLog] => SimpleXMLElement Object
+        (
+        )
+
+    [space] => app_10
+    [appHeader] => #ffffff
+    [appHeaderColor] => #ff3882
+    [appVersion] => 1.0.0
+    [appName] => Tulips
+    [appDomain] => 0
+    [appUser] => SimpleXMLElement Object
+        (
+            [id] => 0
+            [email] => nobody@nohost.com
+            [nome] => Anonymous
+            [level] => 0
+            [app] => N
+            [admin] => N
+            [sadmin] => N
+            [hostel] => 10
+            [token] => 5058f1af8388633f609cadb75a75dc9d
+        )
+
+    [addCss] => 
+.material-bar,.navbar.navbar-inverse{
+	background:#ffffff;
+	background: #ff3019;
+	background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#ffffff));
+	background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%);
+	background: -o-linear-gradient(top, #ffffff 0%,#ffffff 100%);
+	background: linear-gradient(to bottom, #ffffff 0%,#ffffff 100%);
+	color:#ff3882;
+}
+.material-bar .navbar-item{
+	color:#ff3882;
+}
+.material-bar,.navbar.navbar-inverse{
+	background:#ffffff;
+	background: #ff3019;
+	background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#ffffff));
+	background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%);
+	background: -o-linear-gradient(top, #ffffff 0%,#ffffff 100%);
+	background: linear-gradient(to bottom, #ffffff 0%,#ffffff 100%);
+	color:#ff3882;
+}
+.material-bar .navbar-item{
+	color:#ff3882;
+}
+    [lang] => de
+    [runJS] => console.log("Callback");
+    [templates] => SimpleXMLElement Object
+        (
+            [header] => <table border="0" cellpadding="0" cellspacing="0" class='table'>
+	<tr>
+		<td>
+		<a onclick='goBack();' class="navbar-item">
+			<span class="glyphicon glyphicon-triangle-left"></span>
+		</a>
+		</td>
+		<td style='width:100%'>
+		<a onclick='goBack();' class="navbar-item">
+			<% if(this.logo!=undefined){ %>
+				<img src='<% this.logo %>' class='appLogo'>
+			<% }else{ %>
+				<% this.title %>
+			<% } %>
+		</a>
+		</td>
+		<% if(this.logged===true){ %>
+			<td>
+				<a class="navbar-item" onclick='a4pp_update();'><span id='updateIcon' class="glyphicon glyphicon-refresh"></span></a>
+			</td>
+		<% } %>
+		<% if(this.menu.length > 0){ %>
+		<td>
+			<a class="navbar-item" onclick='toggleMenu();'><span class="glyphicon glyphicon-option-vertical"></span></a>
+		</td>
+		<% } %>
+	</tr>
+</table>
+
+            [listview] => <div class="container">
+	<div class='superior'>
+		<% this.details %>
+	</div>
+	<ul class="model-list list <% if(this.extra!=undefined){ %> <% this.extra %> <% } %>">
+		<% for(var i=0;i<this.items.length;i++){ %>
+			<% if(this.items[i].model=='heading'){ %>
+			<h4><% this.items[i].title %></h4>
+			<% }else{ %>
+			<li class='model-list-item' onclick='triggerGoTo("<% this.items[i].xpath %>");'>
+				<% if(this.items[i].icon!=undefined){ %>
+				<img src='<% this.items[i].icon %>' style='width:48px;'>
+				<% } %> 
+				<% if(this.items[i].glyphicon!="none"){ %>
+				<div class='glyph' style='background-color:<% this.items[i].color %>'><span class='glyphicon glyphicon-<% this.items[i].glyphicon %>' style='width:48px;'></span></div>
+				<% } %> 
+				<% this.items[i].title %>
+			</li>
+			<% } %>
+		<% } %>
+	</ul> 
+</div> 
+        )
+
+    [title] => Tulipas
+    [model] => list
+    [items] => SimpleXMLElement Object
+        (
+            [item0] => SimpleXMLElement Object
+                (
+                    [id] => 2
+                    [title] => Teether  
+                    [model] => list
+                    [items] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [details] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [icon] => img/11330.jpg
+                    [callback] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [glyphicon] => none
+                    [color] => silver
+                    [menu] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [menubar] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [async] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [xpath] => /0
+                )
+
+            [item1] => SimpleXMLElement Object
+                (
+                    [id] => 3
+                    [title] => Stacker
+                    [model] => list
+                    [items] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [details] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [icon] => img/11329.jpg
+                    [callback] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [glyphicon] => none
+                    [color] => silver
+                    [menu] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [menubar] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [async] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [xpath] => /1
+                )
+
+            [item2] => SimpleXMLElement Object
+                (
+                    [id] => 4
+                    [title] => Babyservice - Bamboo Butterfly
+                    [model] => list
+                    [items] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [details] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [icon] => img/11323.jpg
+                    [callback] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [glyphicon] => none
+                    [color] => silver
+                    [menu] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [menubar] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [async] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [xpath] => /2
+                )
+
+            [item3] => SimpleXMLElement Object
+                (
+                    [id] => 5
+                    [title] => Babyservice - Bamboo Frog
+                    [model] => list
+                    [items] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [details] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [icon] => img/11324.jpg
+                    [callback] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [glyphicon] => none
+                    [color] => silver
+                    [menu] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [menubar] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [async] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [xpath] => /3
+                )
+
+            [item4] => SimpleXMLElement Object
+                (
+                    [id] => 6
+                    [title] => Babyservice - Bamboo Cow
+                    [model] => list
+                    [items] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [details] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [icon] => img/11325.jpg
+                    [callback] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [glyphicon] => none
+                    [color] => silver
+                    [menu] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [menubar] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [async] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [xpath] => /4
+                )
+
+            [item5] => SimpleXMLElement Object
+                (
+                    [id] => 7
+                    [title] => Babyservice - Bamboo Bee
+                    [model] => list
+                    [items] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [details] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [icon] => img/11326.jpg
+                    [callback] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [glyphicon] => none
+                    [color] => silver
+                    [menu] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [menubar] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [async] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [xpath] => /5
+                )
+
+            [item6] => SimpleXMLElement Object
+                (
+                    [id] => 8
+                    [title] => Schlafsack b
+                    [model] => list
+                    [items] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [details] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [icon] => img/11319.jpg
+                    [callback] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [glyphicon] => none
+                    [color] => silver
+                    [menu] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [menubar] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [async] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [xpath] => /6
+                )
+
+            [item7] => SimpleXMLElement Object
+                (
+                    [id] => 9
+                    [title] => Schlafsack Pink
+                    [model] => list
+                    [items] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [details] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [icon] => img/11318.jpg
+                    [callback] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [glyphicon] => none
+                    [color] => silver
+                    [menu] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [menubar] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [async] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [xpath] => /7
+                )
+
+            [item8] => SimpleXMLElement Object
+                (
+                    [id] => 10
+                    [title] => Schlafsack r
+                    [model] => list
+                    [items] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [details] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [icon] => img/11322.jpg
+                    [callback] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [glyphicon] => none
+                    [color] => silver
+                    [menu] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [menubar] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [async] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [xpath] => /8
+                )
+
+            [item9] => SimpleXMLElement Object
+                (
+                    [id] => 11
+                    [title] => Schlafsack p
+                    [model] => list
+                    [items] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [details] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [icon] => img/11320.jpg
+                    [callback] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [glyphicon] => none
+                    [color] => silver
+                    [menu] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [menubar] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [async] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [xpath] => /9
+                )
+
+        )
+
+    [details] => SimpleXMLElement Object
+        (
+        )
+
+    [icon] => SimpleXMLElement Object
+        (
+        )
+
+    [callback] => SimpleXMLElement Object
+        (
+        )
+
+    [glyphicon] => none
+    [color] => silver
+    [menu] => SimpleXMLElement Object
+        (
+            [item0] => SimpleXMLElement Object
+                (
+                    [title] => Iniciar sesion
+                    [onclick] => a4pp_login_form();
+                )
+
+            [item1] => SimpleXMLElement Object
+                (
+                    [title] => Restrarse
+                    [onclick] => a4pp_register_form();
+                )
+
+            [item2] => SimpleXMLElement Object
+                (
+                    [title] => Entrar
+                    [onclick] => a4pp_login_form();
+                )
+
+            [item3] => SimpleXMLElement Object
+                (
+                    [title] => Salir
+                    [onclick] => a4pp_logout();
+                )
+
+        )
+
+    [menubar] => SimpleXMLElement Object
+        (
+        )
+
+    [async] => SimpleXMLElement Object
+        (
+        )
+
+    [xpath] => SimpleXMLElement Object
+        (
+        )
+
+    [logged] => SimpleXMLElement Object
+        (
+        )
+
+    [update_url] => http://www.tulipas.de/app.php
+    [name] => Tulips
+    [appHeader2] => #ffffff
+)
